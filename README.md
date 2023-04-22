@@ -1,5 +1,11 @@
 # ProyectoProgramador2023
+
+
 Proyecto final e-commerce - trabajo Integrador
+
+
+
+
 
 ## Integrantes del equipo:
 
@@ -7,7 +13,7 @@ Proyecto final e-commerce - trabajo Integrador
   <table style="width: 100%; text-align: center;">
       <tr>
       <th>Id:</th>
-      <th>Alumno:</th>
+      <th>Alumno/a:</th>
     </tr>
     <tr>
       <th>1</th>

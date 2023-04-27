@@ -3,35 +3,49 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { CuidadosPaseadoresComponent } from './cuidados-paseadores/cuidados-paseadores.component';
-import { CuidadosPeluqueriaComponent } from './cuidados-peluqueria/cuidados-peluqueria.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
-import { PaseadorComponent } from './paseador/paseador.component';
-import { UserComponent } from './user/user.component';
-import { VeterinariaComponent } from './veterinaria/veterinaria.component';
-import { Veterinaria2Component } from './veterinaria2/veterinaria2.component';
+import { VeterinariaComponent } from './veterinarias/veterinaria/veterinaria.component';
+import { Veterinaria2Component } from './veterinarias/veterinaria2/veterinaria2.component';
 import { VeterinariasComponent } from './veterinarias/veterinarias.component';
-import { VeterinariasGuardiaComponent } from './veterinarias-guardia/veterinarias-guardia.component';
-
-
+import { PagesRoutingModule } from './pages-routing.module';
+import { RegistroComponent } from './usuarios/registro/registro.component';
+import { IniciarSesionComponent } from './usuarios/iniciar-sesion/iniciar-sesion.component';
+import { PaseadorComponent } from './cuidados/paseador/paseador.component';
+import { PaseadoresComponent } from './cuidados/paseadores/paseadores.component';
+import { PeluqueriasCaninasComponent } from './cuidados/peluquerias-caninas/peluquerias-caninas.component';
+import { AlimentacionComponent } from './mascotas/alimentacion/alimentacion.component';
+import { CuidadosGeneralesComponent } from './mascotas/cuidados-generales/cuidados-generales.component';
+import { InformacionMascotasComponent } from './mascotas/informacion-mascotas/informacion-mascotas.component';
+import { VacunasComponent } from './mascotas/vacunas/vacunas.component';
+import { ADomicilioComponent } from './veterinarias/a-domicilio/a-domicilio.component';
+import { DeGuardiaComponent } from './veterinarias/de-guardia/de-guardia.component';
+import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
     ContactoComponent,
-    CuidadosPaseadoresComponent,
-    CuidadosPeluqueriaComponent,
-    MascotasComponent,
+    RegistroComponent,
+    IniciarSesionComponent,
     PaseadorComponent,
-    UserComponent,
+    PaseadoresComponent,
+    PeluqueriasCaninasComponent,
+    AlimentacionComponent,
+    CuidadosGeneralesComponent,
+    InformacionMascotasComponent,
+    VacunasComponent,
+    MascotasComponent,
     VeterinariaComponent,
     Veterinaria2Component,
     VeterinariasComponent,
-    VeterinariasGuardiaComponent
+    ADomicilioComponent,
+    DeGuardiaComponent,
+    MasCercanasComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PagesRoutingModule,
   ],
   exports: [
     DashboardComponent

@@ -4,21 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { PagesModule } from './pages/pages.module';
-import { PaseadoresComponent } from './cuidados/paseadores/paseadores.component';
-import { PeluqueriasCaninasComponent } from './cuidados/peluquerias-caninas/peluquerias-caninas.component';
+// import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaseadoresComponent,
-    PeluqueriasCaninasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    PagesModule
+    // PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

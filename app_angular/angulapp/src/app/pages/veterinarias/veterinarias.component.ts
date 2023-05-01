@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VetItemComponent } from './vet-item/vet-item.component';
 
 @Component({
   selector: 'app-veterinarias',

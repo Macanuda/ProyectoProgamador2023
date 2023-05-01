@@ -1,0 +1,29 @@
+#logo {
+    max-width: 60px;
+    width:100%;
+}
+
+#logo img {
+    width:100%;
+}
+
+.search-button i span {
+    display:none;
+}
+
+.buscador input {
+    width: 100%;
+}
+
+.buscador .form-control {
+    font-size: 14px;
+    border-radius: var(--bs-btn-border-radius) 0 0 var(--bs-btn-border-radius);
+}
+
+button.search-button.btn {
+    background: #EBB4A0;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 0 var(--bs-btn-border-radius) var(--bs-btn-border-radius) 0;
+    border:1px solid #EBB4A0;
+}

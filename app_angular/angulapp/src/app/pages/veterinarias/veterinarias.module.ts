@@ -7,6 +7,7 @@ import { ADomicilioComponent } from './a-domicilio/a-domicilio.component';
 import { DeGuardiaComponent } from './de-guardia/de-guardia.component';
 import { VeterinariaComponent } from './veterinaria/veterinaria.component';
 import { VeterinariasComponent } from './veterinarias/veterinarias.component';
+import { VetItemComponent } from './vet-item/vet-item.component';
 
 
 @NgModule({
@@ -15,11 +16,15 @@ import { VeterinariasComponent } from './veterinarias/veterinarias.component';
     ADomicilioComponent,
     DeGuardiaComponent,
     VeterinariaComponent,
-    VeterinariasComponent
+    VeterinariasComponent,
+    VetItemComponent
   ],
   imports: [
     CommonModule,
     VeterinariasRoutingModule
+  ],
+  exports: [
+    VetItemComponent
   ]
 })
 export class VeterinariasModule { }

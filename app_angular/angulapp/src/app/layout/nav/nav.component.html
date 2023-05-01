@@ -1,50 +1,48 @@
-<div class="row th-bottom">
-    <nav class="navbar navbar-expand-md">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto d-flex justify-content-lg-center justify-content-md-center pl-3 pr-3">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="inicio" routerLinkActive="active">Inicio</a>
-                </li>
-                <li ngbDropdown class="nav-item dropdown">
-                    <a ngbDropDownToggle class="nav-link dropdown-toggle" routerLink="mascotas" id="navbarDropdown2" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Mascotas
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <a class="dropdown-item" routerLink="/mascotas/informacion-mascotas" routerLinkActive="active">Informacion de Mascotas</a>
-                        <a class="dropdown-item" routerLink="/mascotas/alimentacion" routerLinkActive="active">Alimentacion</a>
-                        <a class="dropdown-item" routerLink="/mascotas/vacunas" routerLinkActive="active">Vacunas</a>
-                        <a class="dropdown-item" routerLink="/mascotas/cuidados-generales" routerLinkActive="active" >Cuidados generales</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="/veterinarias/inicio-veterinarias" id="navbarDropdown3" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Veterinaria
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                        <a class="dropdown-item" routerLink="/veterinarias/mas-cercanas" routerLinkActive="active">Mas cercanas</a>
-                        <a class="dropdown-item" routerLink="/veterinarias/a-domicilio" routerLinkActive="active">A domicilio</a>
-                        <a class="dropdown-item" routerLink="/veterinarias/de-guardia" routerLinkActive="active">De guardia</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="cuidados/paseadores" id="navbarDropdown4" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cuidados
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                        <a class="dropdown-item" routerLink="/cuidados/paseadores">Paseadores</a>
-                        <a class="dropdown-item" routerLink="/cuidados/peluquerias-caninas">Peluquerias Caninas</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="comunidad/feed" >Comunidad</a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="contacto" routerLinkActive="active" class="nav-link">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+<nav class="navbar navbar-expand-md">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto d-flex justify-content-lg-center justify-content-md-center pl-3 pr-3">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="inicio" routerLinkActive="active">Inicio</a>
+            </li>
+            <li ngbDropdown class="nav-item dropdown">
+                <a ngbDropDownToggle class="nav-link dropdown-toggle" routerLink="mascotas/informacion-mascotas" id="navbarDropdown2" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mascotas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" routerLink="/mascotas/informacion-mascotas" routerLinkActive="active">Informacion de Mascotas</a>
+                    <a class="dropdown-item" routerLink="/mascotas/alimentacion" routerLinkActive="active">Alimentacion</a>
+                    <a class="dropdown-item" routerLink="/mascotas/vacunas" routerLinkActive="active">Vacunas</a>
+                    <a class="dropdown-item" routerLink="/mascotas/cuidados-generales" routerLinkActive="active" >Cuidados generales</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="/veterinarias/inicio-veterinarias" id="navbarDropdown3" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Veterinaria
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                    <a class="dropdown-item" routerLink="/veterinarias/mas-cercanas" routerLinkActive="active">Mas cercanas</a>
+                    <a class="dropdown-item" routerLink="/veterinarias/a-domicilio" routerLinkActive="active">A domicilio</a>
+                    <a class="dropdown-item" routerLink="/veterinarias/de-guardia" routerLinkActive="active">De guardia</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="cuidados/paseadores" id="navbarDropdown4" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cuidados
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                    <a class="dropdown-item" routerLink="/cuidados/paseadores">Paseadores</a>
+                    <a class="dropdown-item" routerLink="/cuidados/peluquerias-caninas">Peluquerias Caninas</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="comunidad/feed" >Comunidad</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="contacto" routerLinkActive="active" class="nav-link">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>

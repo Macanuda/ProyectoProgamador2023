@@ -1,14 +1,18 @@
 
 // Menu desplegable
 
-const $dropdown = $(".dropdown");
+
+
+
+$( document ).ready(function() {
+
+  const $dropdown = $(".dropdown");
 const $dropdownToggle = $(".dropdown-toggle");
 const $dropdownMenu = $(".dropdown-menu");
-const showClass = "show";
+  const showClass = "show";
 const $navbar_icon = $(".navbar-toggler");
 const $menu= $("#navbarSupportedContent");
-
-$navbar_icon.click( function() {
+$navbar_icon.unbind().click( function() {
     $menu.toggleClass(showClass);
 })
 
@@ -39,12 +43,12 @@ const email = document.getElementById('frmail')
 const usuario = document.getElementById('fruser')
 const form = document.getElementById('formulario-registro')
 
-form.addEventListener('submit', (e) =>{
+/*form.addEventListener('submit', (e) =>{
   e.preventDefault() ;                                                //Cancela el formulario antes de enviar asi no se envia con errores
   if (usuario.value.lenght < 4 || usuario.value.lenght > 15 ){
     alert('El nombre de usuario debe tener entre 4 y 15 carácteres');
   }    
-});
+});*/
 
 function validarEmail(valor) {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor)){
@@ -81,3 +85,8 @@ function validateForm() {
 
 // function validarNombre(nombre){
 //   if (typeof nombre === 'number')
+
+
+});
+
+

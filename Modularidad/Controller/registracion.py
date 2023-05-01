@@ -1,4 +1,0 @@
-# index()
-# contacto()
-# mascotas()
-# user()

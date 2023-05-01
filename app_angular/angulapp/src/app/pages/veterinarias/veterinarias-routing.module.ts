@@ -4,12 +4,14 @@ import { ADomicilioComponent } from './a-domicilio/a-domicilio.component';
 import { DeGuardiaComponent } from './de-guardia/de-guardia.component';
 import { MasCercanasComponent } from './mas-cercanas/mas-cercanas.component';
 import { VeterinariaComponent } from './veterinaria/veterinaria.component';
+import { VeterinariasComponent } from './veterinarias.component';
 // import { Veterinaria2Component } from './veterinaria2/veterinaria2.component';
 
 const routes: Routes = [
   {
     path:'veterinarias',
     children:[
+      {path:'inicio-veterinarias', component: VeterinariasComponent},
       {path:'a-domicilio', component:ADomicilioComponent},
       {path:'de-guardia', component:DeGuardiaComponent},
       {path:'mas-cercanas', component:MasCercanasComponent},

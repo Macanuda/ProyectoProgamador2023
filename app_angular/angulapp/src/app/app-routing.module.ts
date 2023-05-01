@@ -16,6 +16,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/veterinarias/veterinarias.module').then(m=>m.VeterinariasModule)
   },
 
+  {
+    path:'',
+    loadChildren:()=>import('./pages/cuidados/cuidados.module').then(m=>m.CuidadosModule)
+  },
+
+  {
+    path:'',
+    loadChildren:()=>import('./pages/comunidad/comunidad.module').then(m=>m.ComunidadModule)
+  }
+
   // { path: '**', redirectTo: 'registro' },
 ];
 

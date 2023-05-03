@@ -1,0 +1,45 @@
+<!-- Las secciones de contenidos de una pagina de veterinaria  -->
+
+<section class="page-title bg-dark text-light p-100"
+    style="background-image:url(../../../assets/images/p1-title-img.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="title">Veterinarias mas cercanas</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="veterinarias-contenido p-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="vc-busqueda">
+                    <form class="d-flex vc-buscador">
+                        <input type="search" name="buscar" placeholder="Buscar veterinaria..." autocomplete="off"
+                            class="form-control">
+                        <button type="submit" class="search-button btn"><i
+                                class="fa-solid fa-magnifying-glass"><span>Buscar</span></i></button>
+                    </form>
+                </div>
+                <div class="vc-filtro">
+                    <div class="vc-servicios">
+                        <a href="#"><i class="fa-solid fa-crow"></i> Animales exóticos</a>
+                        <a href="#"><i class="fa-solid fa-dog"></i> Animales pequeños</a>
+                        <a href="#"><i class="fa-solid fa-horse"></i> Animales grandes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            <app-vet-item></app-vet-item>
+            
+        </div>
+    </div>
+</section>

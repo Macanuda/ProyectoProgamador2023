@@ -8,7 +8,7 @@ import { VeterinariaComponent } from './veterinarias/veterinaria/veterinaria.com
 import { Veterinaria2Component } from './veterinarias/veterinaria2/veterinaria2.component';
 import { VeterinariasComponent } from './veterinarias/veterinarias.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { RegistroComponent } from './usuarios/registro/registro.component';
+import { RegistroComponent } from './usuarios/iniciar-sesion/registro/registro.component';
 import { IniciarSesionComponent } from './usuarios/iniciar-sesion/iniciar-sesion.component';
 import { PaseadorComponent } from './cuidados/paseador/paseador.component';
 import { PaseadoresComponent } from './cuidados/paseadores/paseadores.component';

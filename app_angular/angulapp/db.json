@@ -1,0 +1,62 @@
+{
+  "paseadores": [
+    {
+      "id": 1,
+      "nombre": "Federico",
+      "apellido": "García",
+      "contacto": 12349876
+    },
+    {
+      "id": 2,
+      "nombre": "Walter",
+      "apellido": "Caroleo",
+      "contacto": 44355654
+    },
+    {
+      "id": 3,
+      "nombre": "Mariano",
+      "apellido": "Fernández",
+      "contacto": 12349876
+    },
+    {
+      "id": 4,
+      "nombre": "Julio",
+      "apellido": "Pipini",
+      "contacto": 44355654
+    },
+    {
+      "id": 5,
+      "nombre": "Héctor",
+      "apellido": "López",
+      "contacto": 12349876
+    },
+    {
+      "id": 6,
+      "nombre": "Sebastián",
+      "apellido": "Cúneo",
+      "contacto": 44355654
+    },
+    {
+      "id": 7,
+      "nombre": "Federico",
+      "apellido": "Massa",
+      "contacto": 12349876
+    },
+    {
+      "id": 8,
+      "nombre": "Walter",
+      "apellido": "Guardiola",
+      "contacto": 44355654
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

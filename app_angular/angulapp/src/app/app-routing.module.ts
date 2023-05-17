@@ -27,8 +27,17 @@ const routes: Routes = [
     loadChildren:()=>import('./pages/comunidad/comunidad.module').then(m=>m.ComunidadModule)
   },
 
-  { path: 'contacto', component: ContactoComponent }
+  { path: 'contacto', component: ContactoComponent },
 
+  {
+    path:'',
+    loadChildren:()=>import('./pages/usuarios/usuarios.module').then(m=>m.UsuariosModule)
+  },
+
+  {
+    path:'',
+    loadChildren:()=>import('./pages/usuarios/iniciar-sesion/iniciar-sesion.module').then(m=>m.IniciarSesionModule)
+  },
   // { path: '**', redirectTo: 'registro' },
 ];
 

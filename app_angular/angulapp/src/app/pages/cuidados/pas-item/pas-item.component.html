@@ -1,16 +1,16 @@
-<div class="vet-carto">
+<div class="vet-carto" *ngFor="let paseador of paseadores">
     <figure>
         <img src="../../../assets/images/paseador2.jpg" alt="paseador" title="paseador">
     </figure>
     <div class="vc-content">
-        <h4 class="title">Carlos Gutierrez</h4>
+        <h4 class="title">{{paseador.nombre}} {{paseador.apellido}}</h4>
         <div class="vc-contacto">
             <ul class="contacto">
                 <li class="contacto-item">
-                    <i class="fa-brands fa-whatsapp"></i> <a href="#">555555555555</a>
+                    <i class="fa-brands fa-whatsapp"></i> <a href="#">{{paseador.contacto}}</a>
                 </li>
                 <li class="contacto-item">
-                    <i class="fa-solid fa-phone"></i> <a href="#">555555555555</a>
+                    <i class="fa-solid fa-phone"></i> <a href="#">{{paseador.contacto}}</a>
                 </li>
             </ul>
         </div>

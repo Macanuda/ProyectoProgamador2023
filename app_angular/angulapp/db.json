@@ -4,49 +4,371 @@
       "id": 1,
       "nombre": "Federico",
       "apellido": "García",
-      "contacto": 12349876
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }      
     },
     {
       "id": 2,
       "nombre": "Walter",
       "apellido": "Caroleo",
-      "contacto": 44355654
+      "imageUrl": "../../../assets/images/paseador2.jpg",
+      "thumbUrl": "../../../assets/images/paseador2-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"9AM - 8PM",
+        "martes":"9AM - 8PM",
+        "miercoles":"9AM - 8PM",
+        "jueves":"9AM - 8PM",
+        "viernes":"9AM - 8PM",
+        "sabado":"9AM - 8PM",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 3,
       "nombre": "Mariano",
       "apellido": "Fernández",
-      "contacto": 12349876
+      "imageUrl": "../../../assets/images/paseador3.png",
+      "thumbUrl": "../../../assets/images/paseador3-t.png",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"8AM - 8PM",
+        "martes":"8AM - 8PM",
+        "miercoles":"8AM - 8PM",
+        "jueves":"8AM - 8PM",
+        "viernes":"8AM - 8PM",
+        "sabado":"8AM - 8PM",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 4,
       "nombre": "Julio",
       "apellido": "Pipini",
-      "contacto": 44355654
+      "imageUrl": "../../../assets/images/paseador4.png",
+      "thumbUrl": "../../../assets/images/paseador4-t.png",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"11AM - 8PM",
+        "martes":"11AM - 8PM",
+        "miercoles":"11AM - 8PM",
+        "jueves":"11AM - 8PM",
+        "viernes":"11AM - 8PM",
+        "sabado":"cerrado",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 5,
       "nombre": "Héctor",
       "apellido": "López",
-      "contacto": 12349876
+      "imageUrl": "../../../assets/images/paseador5.jpg",
+      "thumbUrl": "../../../assets/images/paseador5-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"cerrado",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 6,
       "nombre": "Sebastián",
       "apellido": "Cúneo",
-      "contacto": 44355654
+      "imageUrl": "../../../assets/images/paseador6.jpg",
+      "thumbUrl": "../../../assets/images/paseador6-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"9AM - 8PM",
+        "martes":"9AM - 8PM",
+        "miercoles":"9AM - 8PM",
+        "jueves":"cerrado",
+        "viernes":"9AM - 8PM",
+        "sabado":"9AM - 8PM",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 7,
       "nombre": "Federico",
       "apellido": "Massa",
-      "contacto": 12349876
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador2.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
     },
     {
       "id": 8,
       "nombre": "Walter",
       "apellido": "Guardiola",
-      "contacto": 44355654
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador2.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    }
+  ],
+  "peluqueria": [
+    {
+      "id": 1,
+      "nombre": "Federico",
+      "apellido": "García",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Walter",
+      "apellido": "Caroleo",
+      "imageUrl": "../../../assets/images/paseador2.jpg",
+      "thumbUrl": "../../../assets/images/paseador2-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Mariano",
+      "apellido": "Fernández",
+      "imageUrl": "../../../assets/images/paseador3.png",
+      "thumbUrl": "../../../assets/images/paseador3-t.png",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Julio",
+      "apellido": "Pipini",
+      "imageUrl": "../../../assets/images/paseador4.png",
+      "thumbUrl": "../../../assets/images/paseador4-t.png",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Héctor",
+      "apellido": "López",
+      "imageUrl": "../../../assets/images/paseador5.jpg",
+      "thumbUrl": "../../../assets/images/paseador5-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Sebastián",
+      "apellido": "Cúneo",
+      "imageUrl": "../../../assets/images/paseador6.jpg",
+      "thumbUrl": "../../../assets/images/paseador6-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Federico",
+      "apellido": "Massa",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador2.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"",
+      "facebook":"https://www.facebook.com/",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 12349876,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
+    },
+    {
+      "id": 8,
+      "nombre": "Walter",
+      "apellido": "Guardiola",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador2.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"",
+      "costo":"<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>",
+      "telefono": 44355654,
+      "horario": {
+        "lunes":"10AM - 8PM",
+        "martes":"10AM - 8PM",
+        "miercoles":"10AM - 8PM",
+        "jueves":"10AM - 8PM",
+        "viernes":"10AM - 8PM",
+        "sabado":"10AM - 8PM",
+        "domingo":"cerrado"
+      }
     }
   ],
   "comments": [

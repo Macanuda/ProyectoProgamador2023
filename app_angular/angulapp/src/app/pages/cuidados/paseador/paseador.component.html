@@ -3,20 +3,17 @@
 <section class="paseador-contenido p-100 bg-light">
     <div class="container"><div class="row">
         <div class="col-lg-6 col-12 order-lg-1 order-2 align-self-center">
-            <h1 class="title">Carlos Gutierrez</h1>
+            <h1 class="title">{{ paseadorInfo.nombre }} {{ paseadorInfo.apellido }}</h1>
             <div class="servicio">
                 <h5>Paseador</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>
+            <div [innerHtml]="paseadorInfo.descripcion"></div>
         </div>
         <div class="col-lg-6 col-12 order-lg-2 order-1 mb-4 mb-lg-0">
-            <div class="page-image"><img alt="cobayo" src="../../../assets/images/paseador.jpg" /></div>
+            <div class="page-image"><img alt="cobayo" src="{{ paseadorInfo.imageUrl }}" /></div>
         </div>
     </div></div>
 </section>
@@ -31,7 +28,7 @@
                     <li class="horario-item">
                         <span class="horario-dia">Lunes</span>
                         <span class="horario-dots"></span>
-                        <span class="horario-tiempo">10AM - 8PM</span>
+                        <span class="horario-tiempo">{{ paseadorInfo.horario.lunes }}</span>
                     </li>
                     <li class="horario-item">
                         <span class="horario-dia">Martes</span>
@@ -70,26 +67,26 @@
             <div class="card peto">
                 <h3>Contacto</h3>
                 <ul class="contacto">
-                    <li class="contacto-item">
-                        <i class="fa-solid fa-envelope"></i> <a href="mailto:email@email.com">email@email.com</a>
+                    <li *ngIf="paseadorInfo.email" class="contacto-item">
+                        <i class="fa-solid fa-envelope"></i> <a href="mailto:{{ paseadorInfo.email }}">{{ paseadorInfo.email }}</a>
                     </li>
-                    <li class="contacto-item">
-                        <i class="fa-brands fa-whatsapp"></i> <a href="#">555555555555</a>
+                    <li *ngIf="paseadorInfo.telefono" class="contacto-item">
+                        <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/{{ paseadorInfo.telefono }}">{{ paseadorInfo.telefono }}</a>
                     </li>
-                    <li class="contacto-item">
-                        <i class="fa-solid fa-phone"></i> <a href="#">555555555555</a>
+                    <li *ngIf="paseadorInfo.telefono" class="contacto-item">
+                        <i class="fa-solid fa-phone"></i> <a href="tel:{{ paseadorInfo.telefono }}">{{ paseadorInfo.telefono }}</a>
                     </li>
                 </ul>
                 <h3>Redes</h3>
                 <ul class="redes">
-                    <li class="redes-item">
-                        <i class="fa-brands fa-instagram"></i> <a href="#">@instagram</a>
+                    <li *ngIf="paseadorInfo.instagram" class="redes-item">
+                        <i class="fa-brands fa-instagram"></i> <a href="{{ paseadorInfo.instagram }}">@instagram</a>
                     </li>
-                    <li class="redes-item">
-                        <i class="fa-brands fa-facebook"></i> <a href="#">@facebook</a>
+                    <li *ngIf="paseadorInfo.facebook" class="redes-item">
+                        <i class="fa-brands fa-facebook"></i> <a href="{{ paseadorInfo.facebook }}">@facebook</a>
                     </li>
-                    <li class="redes-item">
-                        <i class="fa-brands fa-twitter"></i> <a href="#">@twitter</a>
+                    <li *ngIf="paseadorInfo.twitter" class="redes-item">
+                        <i class="fa-brands fa-twitter"></i> <a href="{{ paseadorInfo.twitter }}">@twitter</a>
                     </li>
                 </ul>
             </div>
@@ -98,7 +95,7 @@
             <div class="card peto">
                 <h3>Costo</h3>
                 <p>Los costos de los servicios prestados son.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vitae rem quod ea nihil</p>
+                <div [innerHtml]="paseadorInfo.costo"></div>
             </div>
         </div>
     </div></div>

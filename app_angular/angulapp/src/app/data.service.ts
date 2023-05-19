@@ -6,11 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  url:string='http://localhost:3000/paseadores'
+  url:string='http://localhost:3000/'
 
   constructor(private http:HttpClient) { }
 
-  obtenerDatos(): Observable <any>{
-    return this.http.get(this.url);
+  obtenerDatosPaseadores(): Observable <any>{
+    return this.http.get(this.url+'paseadores');
+  }
+
+  obtenerDatosPeluquerias(): Observable <any>{
+    return this.http.get(this.url+'peluqueria');
   }
 }

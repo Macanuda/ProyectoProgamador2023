@@ -11,7 +11,7 @@ const routes: Routes = [
     {path:'cuidados', component: CuidadosComponent},
     {path:'paseadores',component:PaseadoresComponent},
     {path:'peluquerias-caninas',component:PeluqueriasCaninasComponent},
-    {path:'paseador',component:PaseadorComponent},
+    {path:'paseador/:id',component:PaseadorComponent},
   ]
   }
 ];

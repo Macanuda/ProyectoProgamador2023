@@ -5,60 +5,57 @@
 from django.contrib import admin
 from .models import *
 
-#COMUNIDAD
+# COMUNIDAD
 class ComunidadAdmin(admin.ModelAdmin):
     list_display = ('nombre',)
-#POSTEO
+
+# POSTEO
 class PosteoAdmin(admin.ModelAdmin):
-    list_display = ('titulo','contenido','imagen','url','comentario','fecha','fk_comunidad')
-#GRUPO
+    list_display = ('titulo', 'contenido', 'imagen', 'url', 'comentario', 'fecha', 'fk_comunidad')
+
+# GRUPO
 class GrupoAdmin(admin.ModelAdmin):
-    list_display = ('nombre_grupo','contenido','imagen','imagen_url','comentarios','fecha')
-#AVATAR
+    list_display = ('nombre_grupo', 'contenido', 'imagen', 'imagen_url', 'comentarios', 'fecha')
+
+# AVATAR
 class AvatarAdmin(admin.ModelAdmin):
-    list_display = ('avatar','fk_peluqueria','fk_veterinaria','fk_paseador','fk_dueno_mascota')
-#PASEADOR
+    list_display = ('avatar', 'fk_peluqueria', 'fk_veterinaria', 'fk_paseador', 'fk_dueno_mascota')
+
+# PASEADOR
 class PaseadorAdmin(admin.ModelAdmin):
-    list_display = ('nombre','usuario','email','clave','pais','provincia','localidad','calle','numero','servicios','fk_posteo','fk_comunidad')
+    list_display = ('nombre', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero', 'servicios', 'fk_posteo', 'fk_comunidad')
+
 # PELUQUERIA CANINA
 class PeluqueriaCaninaAdmin(admin.ModelAdmin):
-    list_display = (
-        'nombre_peluqueria', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero',
-        'productos', 'servicios', 'fk_comunidad', 'fk_factura'
-    )
+    list_display = ('nombre_peluqueria', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero', 'productos', 'servicios', 'fk_comunidad', 'fk_factura')
+
 # VETERINARIA
 class VeterinariaAdmin(admin.ModelAdmin):
-    list_display = (
-        'nombre_veterinaria', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero',
-        'productos', 'servicios', 'fk_comunidad'
-    )
-# DUENO MASCOTA
+    list_display = ('nombre_veterinaria', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero', 'productos', 'servicios', 'fk_comunidad')
+
+# DUEÑO MASCOTA
 class DuenoMascotaAdmin(admin.ModelAdmin):
-    list_display = (
-        'nombre', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero', 'fk_veterinaria',
-        'fk_peluqueria', 'fk_paseador', 'fk_comunidad'
-    )
+    list_display = ('nombre', 'usuario', 'email', 'clave', 'pais', 'provincia', 'localidad', 'calle', 'numero', 'fk_veterinaria', 'fk_peluqueria', 'fk_paseador', 'fk_comunidad')
+
 # FACTURA
 class FacturaAdmin(admin.ModelAdmin):
-    list_display = ('fecha', 'fecha_vencimiento', 'total', 'tipo', 'forma_pago', 'fk_dueno_mascota', 'fk_veterinaria',
-                    'fk_peluquerias')
+    list_display = ('fecha', 'fecha_vencimiento', 'total', 'tipo', 'forma_pago', 'fk_dueno_mascota', 'fk_veterinaria', 'fk_peluquerias')
+
 # PRODUCTO
 class ProductoAdmin(admin.ModelAdmin):
-    list_display = (
-        'codigo_barra', 'producto', 'descripcion', 'precio', 'id_categoria', 'id_fabricante', 'stock_disponible',
-        'imagen', 'fk_veterinaria'
-    )
+    list_display = ('codigo_barra', 'producto', 'descripcion', 'precio', 'id_categoria', 'id_fabricante', 'stock_disponible', 'imagen', 'fk_veterinaria')
+
 # RESERVA
 class ReservaAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'fecha', 'fk_dueno_mascota', 'fk_veterinaria', 'fk_peluqueria', 'fk_paseador')
+
 # REGISTRO MASCOTA
 class RegistroMascotaAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'nacimiento', 'especie_animal', 'raza', 'peso', 'altura', 'patologia')
+
 # MASCOTA
 class MascotaAdmin(admin.ModelAdmin):
-    list_display = (
-        'especie_animal', 'raza', 'peso_recomendado', 'actividad_fisica', 'clima_recomendado', 'alimentacion',
-        'esperanza_vida', 'numero', 'patologia', 'vacunas', 'fk_registro_mascota', 'fk_dueno')
+    list_display = ('especie_animal', 'raza', 'peso_recomendado', 'actividad_fisica', 'clima_recomendado', 'alimentacion', 'esperanza_vida', 'numero', 'patologia', 'vacunas', 'fk_registro_mascota', 'fk_dueno_mascota')
 
 #REGISTROS
 admin.site.register(Comunidad,ComunidadAdmin)

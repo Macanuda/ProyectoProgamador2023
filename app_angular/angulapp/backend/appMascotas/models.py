@@ -3,7 +3,18 @@
 # 123456
 
 from django.db import models
+from django.contrib.auth.models import AbstractUser, User
 from django.utils.timezone import now
+
+# -------------- ABSTRACT USER --------------
+class CustomUser(AbstractUser):
+    email = models.EmailField(max_length=150, unique=True)
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username','password']
+
+    def __str__(self):
+        return self.email
+
 
 # ---------------- COMUNIDAD ----------------
 class Comunidad(models.Model):
@@ -47,10 +58,10 @@ class Grupo(models.Model):
     fecha = models.DateField(default=now, editable=False)
 
     fk_comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE, null=True)
-    fk_veterinaria =  models.ManyToManyField('Veterinaria', null=False)
-    fk_peluqueria = models.ManyToManyField('PeluqueriaCanina', null=False)
-    fk_paseador = models.ManyToManyField('Paseador', null=False)
-    fk_dueno_mascota = models.ManyToManyField('DuenoMascota', null=False)
+    fk_veterinaria =  models.ManyToManyField('Veterinaria')
+    fk_peluqueria = models.ManyToManyField('PeluqueriaCanina')
+    fk_paseador = models.ManyToManyField('Paseador')
+    fk_dueno_mascota = models.ManyToManyField('DuenoMascota')
 
     class Meta:
         db_table = 'Grupo'
@@ -92,6 +103,7 @@ class Paseador(models.Model):
 
     fk_posteo = models.ForeignKey(Posteo, on_delete=models.CASCADE, null=False)
     fk_comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE, null=True)
+    fk_customUser = models.OneToOneField(CustomUser, on_delete=models.CASCADE, null=False)
 
     class Meta:
         db_table = 'Paseador'
@@ -118,6 +130,7 @@ class PeluqueriaCanina(models.Model):
 
     fk_comunidad = models.ForeignKey(Comunidad, on_delete=models.CASCADE, null=True)
     fk_factura = models.ForeignKey('Factura', on_delete=models.CASCADE, null=True)
+    fk_customUser = models.OneToOneField(CustomUser, on_delete=models.CASCADE, null=False)
 
     class Meta:
         db_table = 'PeluqueriaCanina'
@@ -142,6 +155,7 @@ class Veterinaria(models.Model):
     servicios = models.CharField(max_length=200, blank=True)
 
     fk_comunidad = models.ForeignKey(Posteo, on_delete=models.CASCADE, null=True)
+    fk_customUser = models.OneToOneField(CustomUser, on_delete=models.CASCADE, null=False)
 
     class Meta:
         db_table = 'Veterinaria'
@@ -167,6 +181,7 @@ class DuenoMascota(models.Model):
     fk_peluqueria = models.ForeignKey(PeluqueriaCanina, on_delete=models.CASCADE, null=False)
     fk_paseador = models.ForeignKey(Paseador, on_delete=models.CASCADE, null=False)
     fk_comunidad = models.ForeignKey(Comunidad, on_delete=models.SET_NULL, null=True, default=None)
+    fk_customUser = models.OneToOneField(CustomUser, on_delete=models.CASCADE, null=False)
 
     class Meta:
         db_table = 'DuenoMascota'
@@ -292,9 +307,9 @@ class Servicio(models.Model):
     de_guardia = models.BooleanField(default=False)
 
     fk_dueno_mascota = models.ForeignKey(DuenoMascota, on_delete=models.CASCADE, null=False)
-    fk_veterinaria = models.ManyToManyField(Veterinaria, null=False)
-    fk_paseador = models.ManyToManyField(Paseador, null=False)
-    fk_peluqueria = models.ManyToManyField(PeluqueriaCanina, null=False)
+    fk_veterinaria = models.ManyToManyField(Veterinaria)
+    fk_paseador = models.ManyToManyField(Paseador)
+    fk_peluqueria = models.ManyToManyField(PeluqueriaCanina)
 
     class Meta:
         db_table = 'Servicio'
@@ -302,3 +317,4 @@ class Servicio(models.Model):
         verbose_name_plural = 'Servicios'
     def __str__(self):
         return self.servicio
+

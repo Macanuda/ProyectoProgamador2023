@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
     'appMascotas',
 ]
 
@@ -36,6 +38,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -67,9 +75,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mascotas',
         'USER': 'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'PORT':3306,
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 3306,
     }
 }
 
@@ -91,6 +99,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Custom User Model
+AUTH_USER_MODEL = 'appMascotas.CustomUser'
 
 
 # Internationalization

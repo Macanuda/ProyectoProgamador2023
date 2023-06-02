@@ -12,8 +12,6 @@ from .models import *
 class CustomUserAdmin(UserAdmin):
     pass
 
-
-
 # COMUNIDAD
 class ComunidadAdmin(admin.ModelAdmin):
     list_display = ('nombre',)

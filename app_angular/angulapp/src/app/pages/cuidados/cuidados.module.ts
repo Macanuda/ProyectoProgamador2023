@@ -8,6 +8,7 @@ import { CuidadosComponent } from './cuidados/cuidados.component';
 import { PaseadorComponent } from './paseador/paseador.component';
 import { PasItemComponent } from './pas-item/pas-item.component';
 import { PelItemComponent } from './pel-item/pel-item.component';
+import { PeluqueriaComponent } from './peluqueria/peluqueria.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PelItemComponent } from './pel-item/pel-item.component';
     PaseadorComponent,
     CuidadosComponent,
     PasItemComponent,
-    PelItemComponent
+    PelItemComponent,
+    PeluqueriaComponent
   ],
   imports: [
     CommonModule,

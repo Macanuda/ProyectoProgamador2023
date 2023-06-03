@@ -46,12 +46,6 @@ export class PaseadorComponent implements OnInit {
         this.paseador = params["id"];
       }
     )
-
-    console.log(this.paseador)
-    
-
   }
   
-
-
 }

@@ -1,0 +1,192 @@
+<!-- Las secciones de contenidos de una pagina de servicio paseador -->
+
+<section class="paseador-contenido p-100 bg-light">
+    <div class="container"><div class="row">
+        <div class="col-lg-6 col-12 order-lg-1 order-2 align-self-center">
+            <h1 class="title">{{ peluqueriaInfo.nombre }}</h1>
+            <div class="servicio">
+                <h5>Peluqueria Canina</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div [innerHtml]="peluqueriaInfo.descripcion"></div>
+        </div>
+        <div class="col-lg-6 col-12 order-lg-2 order-1 mb-4 mb-lg-0">
+            <div class="page-image"><img alt="cobayo" [src]="peluqueriaInfo.imageUrl" /></div>
+        </div>
+    </div></div>
+</section>
+
+<section class="home-contenido bloque-info p-100">
+    <div class="container"><div class="row">
+        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+            <div class="card peto">
+                <h3>Horario</h3>
+                <p>Estos son los horarios que manejamos para el servicio!</p>
+                <ul class="horario">
+                    <li class="horario-item">
+                        <span class="horario-dia">Lunes</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.lunes }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Martes</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.martes }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Miercoles</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.miercoles }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Jueves</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.jueves }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Viernes</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.viernes }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Sábado</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.sabado }}</span>
+                    </li>
+                    <li class="horario-item">
+                        <span class="horario-dia">Domingo</span>
+                        <span class="horario-dots"></span>
+                        <span class="horario-tiempo">{{ peluqueriaInfo.horario.domingo }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+            <div class="card peto">
+                <h3>Contacto</h3>
+                <ul class="contacto">
+                    <li *ngIf="peluqueriaInfo.email" class="contacto-item">
+                        <i class="fa-solid fa-envelope"></i> <a href="mailto:{{ peluqueriaInfo.email }}">{{ peluqueriaInfo.email }}</a>
+                    </li>
+                    <li *ngIf="peluqueriaInfo.telefono" class="contacto-item">
+                        <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/{{ peluqueriaInfo.telefono }}">{{ peluqueriaInfo.telefono }}</a>
+                    </li>
+                    <li *ngIf="peluqueriaInfo.telefono" class="contacto-item">
+                        <i class="fa-solid fa-phone"></i> <a href="tel:{{ peluqueriaInfo.telefono }}">{{ peluqueriaInfo.telefono }}</a>
+                    </li>
+                </ul>
+                <h3>Redes</h3>
+                <ul class="redes">
+                    <li *ngIf="peluqueriaInfo.instagram" class="redes-item">
+                        <i class="fa-brands fa-instagram"></i> <a href="{{ peluqueriaInfo.instagram }}">@instagram</a>
+                    </li>
+                    <li *ngIf="peluqueriaInfo.facebook" class="redes-item">
+                        <i class="fa-brands fa-facebook"></i> <a href="{{ peluqueriaInfo.facebook }}">@facebook</a>
+                    </li>
+                    <li *ngIf="peluqueriaInfo.twitter" class="redes-item">
+                        <i class="fa-brands fa-twitter"></i> <a href="{{ peluqueriaInfo.twitter }}">@twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="card peto">
+                <h3>Costo</h3>
+                <p>Los costos de los servicios prestados son.</p>
+                <div [innerHtml]="peluqueriaInfo.costo"></div>
+            </div>
+        </div>
+    </div></div>
+</section>
+
+
+
+<section class="home-contenido bloque-info p-100 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h4 class="uppertitle">Valoraciones</h4>
+                <h2 class="title">Opiniones y algo mas</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="valora-no-loged">
+                    <a class="btn" href="user.html">Necesitas registrarte/loguearte para valorar</a>
+                </div>
+                <form id="valora-form">
+                    <div class="vf-username">Roberto Carlo</div>
+                    <div class="vf-stars" id="vf-star">
+                        <i class="fa-regular fa-star" id="val-star1"></i>
+                        <i class="fa-regular fa-star" id="val-star2"></i>
+                        <i class="fa-regular fa-star" id="val-star3"></i>
+                        <i class="fa-regular fa-star" id="val-star4"></i>
+                        <i class="fa-regular fa-star" id="val-star5"></i>
+                    </div>
+                    <input type="number" max="5" min="0" class="mb-2 form-control d-none" value="0" name="vf-val" id="vf-val" placeholder="0">
+                    <textarea name="vf-mensaje" placeholder="Valoración" id="" cols="30" rows="10" class="mb-2 form-control bg-light mb-2"></textarea>
+                    <button class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row valoraciones">
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Juan Antonio Solis</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Estela Gutierrez</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Carla Martinez</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Marco Aurelio</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Juana Viale</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

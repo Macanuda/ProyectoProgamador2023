@@ -17,4 +17,8 @@ export class DataService {
   obtenerDatosPeluquerias(): Observable <any>{
     return this.http.get(this.url+'peluqueria');
   }
+
+  obtenerDatosVeterinaria(): Observable <any>{
+    return this.http.get(this.url+'veterinaria');
+  }
 }

@@ -10,7 +10,6 @@ import { VeterinariasComponent } from './veterinarias/veterinarias.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { RegistroComponent } from './usuarios/iniciar-sesion/registro/registro.component';
 import { IniciarSesionComponent } from './usuarios/iniciar-sesion/iniciar-sesion.component';
-import { PaseadorComponent } from './cuidados/paseador/paseador.component';
 import { PaseadoresComponent } from './cuidados/paseadores/paseadores.component';
 import { PeluqueriasCaninasComponent } from './cuidados/peluquerias-caninas/peluquerias-caninas.component';
 import { AlimentacionComponent } from './mascotas/alimentacion/alimentacion.component';
@@ -28,17 +27,13 @@ import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.c
     ContactoComponent,
     RegistroComponent,
     IniciarSesionComponent,
-    PaseadoresComponent,
-    PeluqueriasCaninasComponent,
     AlimentacionComponent,
     CuidadosGeneralesComponent,
     InformacionMascotasComponent,
     VacunasComponent,
     MascotasComponent,
-    VeterinariaComponent,
     Veterinaria2Component,
     VeterinariasComponent,
-    ADomicilioComponent,
     DeGuardiaComponent,
     MasCercanasComponent,
   ],

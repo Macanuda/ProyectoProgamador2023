@@ -188,8 +188,7 @@
   "peluqueria": [
     {
       "id": 1,
-      "nombre": "Federico",
-      "apellido": "García",
+      "nombre": "Cariñitos",
       "imageUrl": "../../../assets/images/paseador.jpg",
       "thumbUrl": "../../../assets/images/paseador-t.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -211,8 +210,7 @@
     },
     {
       "id": 2,
-      "nombre": "Walter",
-      "apellido": "Caroleo",
+      "nombre": "MascoPel",
       "imageUrl": "../../../assets/images/paseador2.jpg",
       "thumbUrl": "../../../assets/images/paseador2-t.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -234,8 +232,7 @@
     },
     {
       "id": 3,
-      "nombre": "Mariano",
-      "apellido": "Fernández",
+      "nombre": "PetHappy",
       "imageUrl": "../../../assets/images/paseador3.png",
       "thumbUrl": "../../../assets/images/paseador3-t.png",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -257,8 +254,7 @@
     },
     {
       "id": 4,
-      "nombre": "Julio",
-      "apellido": "Pipini",
+      "nombre": "PeluPet",
       "imageUrl": "../../../assets/images/paseador4.png",
       "thumbUrl": "../../../assets/images/paseador4-t.png",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -280,8 +276,7 @@
     },
     {
       "id": 5,
-      "nombre": "Héctor",
-      "apellido": "López",
+      "nombre": "Felices",
       "imageUrl": "../../../assets/images/paseador5.jpg",
       "thumbUrl": "../../../assets/images/paseador5-t.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -303,8 +298,7 @@
     },
     {
       "id": 6,
-      "nombre": "Sebastián",
-      "apellido": "Cúneo",
+      "nombre": "Cachitos",
       "imageUrl": "../../../assets/images/paseador6.jpg",
       "thumbUrl": "../../../assets/images/paseador6-t.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -326,8 +320,7 @@
     },
     {
       "id": 7,
-      "nombre": "Federico",
-      "apellido": "Massa",
+      "nombre": "Puppy Hair",
       "imageUrl": "../../../assets/images/paseador.jpg",
       "thumbUrl": "../../../assets/images/paseador2.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -349,8 +342,7 @@
     },
     {
       "id": 8,
-      "nombre": "Walter",
-      "apellido": "Guardiola",
+      "nombre": "Pelitos",
       "imageUrl": "../../../assets/images/paseador.jpg",
       "thumbUrl": "../../../assets/images/paseador2.jpg",
       "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
@@ -369,6 +361,189 @@
         "sabado":"10AM - 8PM",
         "domingo":"cerrado"
       }
+    }
+  ],
+  "veterinaria": [
+    {
+      "id": 1,
+      "nombre": "Cariñitos",
+      "categoria": "Veterinaria",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "Direccion":"Corro 2022",
+      "telefono": 12349876,
+      "Lat": 809007,
+      "Lng": 7.809007,
+      "Adomicilio": 1,
+      "Anormales": 1,
+      "Aexoticos": 0,
+      "Agranja": 0,
+      "horario": [
+        {
+          "from":"10:00", 
+          "to":"20:00"
+        }, {
+          "from":"10:00", 
+          "to":"20:00"
+        }, {
+          "from":"10:00", 
+          "to":"20:00"
+        }, {
+          "from":"10:00", 
+          "to":"20:00"
+        }, {
+          "from":"10:00", 
+          "to":"20:00"
+        }, {
+          "from":"cerrado", 
+          "to":"cerrado"
+        }, {
+          "from":"10:00", 
+          "to":"20:00"
+        }
+      ],
+      "servicios": [
+        {
+          "id":1,
+          "titulo":"Lorem impsum",
+          "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed"
+        }, {
+          "id":2,
+          "titulo":"Lorem Impsun2",
+          "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed"
+        }, {
+          "id":3,
+          "titulo":"Lorem impsum3",
+          "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed"
+        }, {
+          "id":4,
+          "titulo":"Lorem impsum4",
+          "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Cariñitos2",
+      "categoria": "Veterinaria",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "Direccion":"Corro 2022",
+      "telefono": 12349876,
+      "Lat": 51.678418,
+      "Lng": 7.809007,
+      "Adomicilio": 0,
+      "Anormales": 1,
+      "Aexoticos": 0,
+      "Agranja": 1,
+      "horario": [
+        {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"00", 
+          "to":"10"
+        }, {
+          "from":"cerrado", 
+          "to":"20"
+        }
+      ],
+      "servicios": [
+        {
+          "titulo":"Lorem impsum",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem Impsun2",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem impsum3",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem impsum4",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Cariñitos3",
+      "categoria": "Veterinaria - PetShop",
+      "imageUrl": "../../../assets/images/paseador.jpg",
+      "thumbUrl": "../../../assets/images/paseador-t.jpg",
+      "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus temporibus autem? Aut, consectetur.</p>",
+      "email": "email@email.com",
+      "instagram":"https://instagram.com/",
+      "twitter":"https://twitter.com/",
+      "facebook":"https://www.facebook.com/",
+      "Direccion":"Corro 2022",
+      "telefono": 12349876,
+      "Lat": 809007,
+      "Lng": 7.809007,
+      "Adomicilio": 1,
+      "Anormales": 1,
+      "Aexoticos": 1,
+      "Agranja": 0,      
+      "horario": [
+        {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"20"
+        }, {
+          "from":"10", 
+          "to":"22"
+        }, {
+          "from":"cerrado", 
+          "to":"cerrado"
+        }, {
+          "from":"cerrado", 
+          "to":"20"
+        }
+      ],
+      "servicios": [
+        {
+          "titulo":"Lorem impsum",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem Impsun2",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem impsum3",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }, {
+          "titulo":"Lorem impsum4",
+          "descripcion":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque orci nisl, sit amet venenatis ex tempor eget. Fusce massa velit, auctor vel egestas sed</p>"
+        }
+      ]
     }
   ],
   "comments": [

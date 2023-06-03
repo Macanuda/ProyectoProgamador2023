@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PaseadorComponent } from './paseador/paseador.component';
 import { PaseadoresComponent } from './paseadores/paseadores.component';
 import { PeluqueriasCaninasComponent } from './peluquerias-caninas/peluquerias-caninas.component';
+import { PeluqueriaComponent } from './peluqueria/peluqueria.component';
 import { CuidadosComponent } from './cuidados/cuidados.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     {path:'paseadores',component:PaseadoresComponent},
     {path:'peluquerias-caninas',component:PeluqueriasCaninasComponent},
     {path:'paseador/:id',component:PaseadorComponent},
+    {path:'peluqueria/:id',component:PeluqueriaComponent},
   ]
   }
 ];

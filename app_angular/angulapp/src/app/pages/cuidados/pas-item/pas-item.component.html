@@ -1,0 +1,28 @@
+<div class="col-lg-4 col-12 col-md-6" *ngFor="let paseador of paseadores">
+    <div class="vet-carto">
+        <figure>
+            <img [src]="paseador.thumbUrl" alt="paseador" title="paseador">
+        </figure>
+        <div class="vc-content">
+            <h4 class="title">{{paseador.nombre}} {{paseador.apellido}}</h4>
+            <div class="vc-contacto">
+                <ul class="contacto">
+                    <li class="contacto-item">
+                        <i class="fa-brands fa-whatsapp"></i> <a href="#">{{paseador.telefono}}</a>
+                    </li>
+                    <li class="contacto-item">
+                        <i class="fa-solid fa-phone"></i> <a href="#">{{paseador.telefono}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="vc-bottom d-flex align-self-center justify-content-between">
+                <div class="stars d-flex align-self-center">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <a routerLink="../paseador/{{paseador.nombre}}{{paseador.apellido}}" class="btn btn-primary w-100">Mas Info!</a>
+        </div>
+    </div>
+</div>

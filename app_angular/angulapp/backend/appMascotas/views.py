@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
-from rest_framework import status, generics
+from rest_framework import status, generics, authentication, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.authtoken.views import ObtainAuthToken
 from .serializers import UserSerializer
-from .models import Categoria, Producto, CustomUser
+from .models import Producto, CustomUser
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
-from .serializers import ProductoSerializer, CategoriaSerializer
+from .serializers import ProductoSerializer, AuthTokenSerializer
 from rest_framework import viewsets
 
 #### Inicio ####
@@ -59,10 +60,10 @@ class verProductos(viewsets.ReadOnlyModelViewSet):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
 
-class verCategorias(viewsets.ReadOnlyModelViewSet):
-    permission_classes = [AllowAny]
-    queryset = Categoria.objects.all()
-    serializer_class = CategoriaSerializer
+# class verCategorias(viewsets.ReadOnlyModelViewSet):
+#     permission_classes = [AllowAny]
+#     queryset = Categoria.objects.all()
+#     serializer_class = CategoriaSerializer
 
 #### Agregar producto ####
 class agregarProducto(APIView):
@@ -85,3 +86,28 @@ class ListarUsuarios(generics.ListCreateAPIView):
         queryset = self.get_queryset()
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)
+
+
+
+
+
+#### Los usuarios pueden ver su perfil ####
+class ProfileView(generics.RetrieveUpdateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserSerializer
+    http_method_names = ['get', 'patch']
+    def get_object(self):
+        if self.request.user.is_authenticated:
+            return self.request.user
+
+#### Para editar su perfil, debe estar autenticado ####
+class UpdateUserView(generics.RetrieveUpdateAPIView):
+    serializer_class = UserSerializer
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+    def get_object(self):
+        return self.request.user
+
+
+class CreateTokenView(ObtainAuthToken):
+    serializer_class = AuthTokenSerializer

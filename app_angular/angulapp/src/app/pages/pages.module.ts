@@ -26,7 +26,6 @@ import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.c
     HomeComponent,
     ContactoComponent,
     RegistroComponent,
-    IniciarSesionComponent,
     AlimentacionComponent,
     CuidadosGeneralesComponent,
     InformacionMascotasComponent,

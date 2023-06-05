@@ -19,8 +19,7 @@ export class VeterinariaComponent {
   constructor(private rutaActiva: ActivatedRoute,  private data:DataService) {
 
     const now = new Date();
-    let current_day = now.getDay() - 1;
-    let current_hour = now.getHours();
+    let current_day = now.getDay();
 
     this.data.obtenerDatosVeterinaria().subscribe({
 

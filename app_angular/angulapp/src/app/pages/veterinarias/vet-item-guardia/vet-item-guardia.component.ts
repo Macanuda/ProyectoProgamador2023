@@ -3,12 +3,11 @@ import { DataService } from 'src/app/data.service';
 import { Router } from '@angular/router'
 
 @Component({
-  selector: 'app-vet-item',
-  templateUrl: './vet-item.component.html',
-  styleUrls: ['./vet-item.component.css'],
-  host: {'class': 'row'}
+  selector: 'app-vet-item-guardia',
+  templateUrl: './vet-item-guardia.component.html',
+  styleUrls: ['./vet-item-guardia.component.css']
 })
-export class VetItemComponent {
+export class VetItemGuardiaComponent {
   veterinarias:any;
 
   veterinaria: {id: string};
@@ -37,42 +36,7 @@ export class VetItemComponent {
           }
           
         }       
-        
-        console.log(data)
-        console.log("veterinarias encontradas")
-        this.veterinarias = data;
-        console.log(this.veterinarias)
-        let index = 0
-
-        if (this.rutaActiva.url == "/veterinarias/de-guardia"){
-          for (let k of this.veterinarias) {
-            console.log("chekeando")
-            console.log(k)
-            if(k.open==2) {
-              console.log("borrando")
-              console.log(this.veterinarias[index])
-              this.veterinarias.splice(index,1);              
-            }
-            index++
-          }
-
-
-          console.log("de guardia")
-          this.veterinarias.forEach((value:any,index:any)=>{
-            
-            
-          });
-        }
-
-        if (this.rutaActiva.url == "/veterinarias/a-domicilio"){
-          console.log("a domicilio")
-          this.veterinarias.forEach((value:any,index:any)=>{
-            console.log("checking")
-            if(value.Adomicilio==0) this.veterinarias.splice(index,1);
-          });
-        }
-
-       
+        this.veterinarias = data
         console.log(this.veterinarias)
       },
       error: (errorData) => {
@@ -81,6 +45,5 @@ export class VetItemComponent {
 
     });
   }
-
 
 }

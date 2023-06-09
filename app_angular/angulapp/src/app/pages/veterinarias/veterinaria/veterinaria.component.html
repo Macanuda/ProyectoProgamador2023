@@ -1,19 +1,24 @@
 <!-- Las secciones de contenidos de una pagina de veterinaria  -->
 
-<section class="page-title bg-dark text-light p-100"
+<section class="page-title bg-dark text-light p-100" 
     style="background-image:url(../../../assets/images/p1-title-img.jpg);">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="title">Veterinaria Alcorta</h1>
+                <h1 class="title">{{veterinariaInfo.nombre}}</h1>
                 <div class="servicio-vet">
                     <div class="categoria-vet">
-                        <h5>Veterinaria </h5>
+                        <h5>{{veterinariaInfo.categoria}} </h5>
                     </div>
                     <div class="stars">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="vet-state">
+                        <div *ngIf="veterinariaInfo.open == 1; then thenBlock else elseBlock"></div>
+                        <ng-template #thenBlock><div  class="vt-state open badge">Open</div></ng-template>
+                        <ng-template #elseBlock><div  class="vt-state closed badge">Closed</div></ng-template>
                     </div>
                 </div>
             </div>
@@ -26,21 +31,11 @@
         <div class="row">
             <div class="col-lg-6 col-12 order-lg-1 order-2 align-self-center">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis
-                    aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus
-                    temporibus autem? Aut, consectetur.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis
-                    aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus
-                    temporibus autem? Aut, consectetur.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis
-                    aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus
-                    temporibus autem? Aut, consectetur.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, distinctio pariatur reiciendis
-                    aliquam at vitae, nobis consequuntur unde sed iste accusamus eos atque, dolores nam doloribus
-                    temporibus autem? Aut, consectetur.</p>
+                <div [innerHtml]="veterinariaInfo.descripcion"></div>
+
             </div>
             <div class="col-lg-6 col-12 order-lg-2 order-1 mb-4 mb-lg-0">
-                <div class="page-image"><img alt="cobayo" src="../../../assets/images/portfolio-img-23-540x540.jpg" />
+                <div class="page-image"><img alt="veterinaria" [src]="veterinariaInfo.imageUrl" />
                 </div>
             </div>
         </div>
@@ -52,92 +47,27 @@
         <div class="row">
             <div class="col-lg-6 col-12 order-lg-1 order-2">
                 <h2 class="title">Servicios</h2>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
+                <div class="accordion accordion-flush" id="accordionServicios">
+
+                    <div class="accordion-item" *ngFor="let servicio of veterinariaInfo.servicios">
+                        <h2 class="accordion-header" id="flush-heading{{servicio.id}}">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                Servicio 1
+                                attr.data-bs-target="#flush-collapse{{servicio.id}}" aria-expanded="false"
+                                attr.aria-controls="flush-collapse{{servicio.id}}">
+                                {{servicio.titulo}}
                             </button>
                         </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Delectus ratione repellendus nisi molestiae ipsam expedita natus. Saepe provident harum
-                                accusamus deleniti fugiat reprehenderit, repellendus expedita minima quod rerum quos
-                                possimus?</div>
+                        <div id="flush-collapse{{servicio.id}}" class="accordion-collapse collapse"
+                            attr.aria-labelledby="flush-heading{{servicio.id}}" data-bs-parent="#accordionServicios">
+                            <div class="accordion-body">{{servicio.descripcion}}</div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                Servicio 2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Delectus ratione repellendus nisi molestiae ipsam expedita natus. Saepe provident harum
-                                accusamus deleniti fugiat reprehenderit, repellendus expedita minima quod rerum quos
-                                possimus?</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                Servicio 3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Delectus ratione repellendus nisi molestiae ipsam expedita natus. Saepe provident harum
-                                accusamus deleniti fugiat reprehenderit, repellendus expedita minima quod rerum quos
-                                possimus?</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                Servicio 4
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Delectus ratione repellendus nisi molestiae ipsam expedita natus. Saepe provident harum
-                                accusamus deleniti fugiat reprehenderit, repellendus expedita minima quod rerum quos
-                                possimus?</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                Servicio 5
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Delectus ratione repellendus nisi molestiae ipsam expedita natus. Saepe provident harum
-                                accusamus deleniti fugiat reprehenderit, repellendus expedita minima quod rerum quos
-                                possimus?</div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="col-lg-6 col-12 order-lg-2 order-1 mb-4 mb-lg-0">
                 <h2 class="title">Ubicación</h2>
-                <p><b>Julio A. Roca 1307, Guemes</b></p>
+                <p><b>{{veterinariaInfo.Direccion}}</b></p>
                 <div class="vet-map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13617.888008212678!2d-64.22696006044919!3d-31.428670299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a3c0068edd%3A0x9d0a4b74177dd19b!2sVeterinaria%20Alem%20Sucursal%20Julio%20Roca!5e0!3m2!1sen!2sar!4v1668020304993!5m2!1sen!2sar"
@@ -160,37 +90,80 @@
                         <li class="horario-item">
                             <span class="horario-dia">Lunes</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 8PM</span>
+                            <div *ngIf="veterinariaInfo.horario[0].from == 'cerrado' || veterinariaInfo.horario[0].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[0].from }} - {{ veterinariaInfo.horario[0].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Martes</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 8PM</span>
+                            <div *ngIf="veterinariaInfo.horario[1].from == 'cerrado' || veterinariaInfo.horario[1].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[1].from }} - {{ veterinariaInfo.horario[1].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Miercoles</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 8PM</span>
+                            <div *ngIf="veterinariaInfo.horario[2].from == 'cerrado' || veterinariaInfo.horario[2].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[2].from }} - {{ veterinariaInfo.horario[2].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Jueves</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 8PM</span>
+                            <div *ngIf="veterinariaInfo.horario[3].from == 'cerrado' || veterinariaInfo.horario[3].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[3].from }} - {{ veterinariaInfo.horario[3].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Viernes</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 8PM</span>
+                            <div *ngIf="veterinariaInfo.horario[4].from == 'cerrado' || veterinariaInfo.horario[4].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[4].from }} - {{ veterinariaInfo.horario[4].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Sábado</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">10AM - 2PM</span>
+                            <div *ngIf="veterinariaInfo.horario[5].from == 'cerrado' || veterinariaInfo.horario[5].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[5].from }} - {{ veterinariaInfo.horario[5].to }}</span>
+                            </ng-template>
                         </li>
                         <li class="horario-item">
                             <span class="horario-dia">Domingo</span>
                             <span class="horario-dots"></span>
-                            <span class="horario-tiempo">Cerrado</span>
+                            <div *ngIf="veterinariaInfo.horario[6].from == 'cerrado' || veterinariaInfo.horario[6].to == 'cerrado'; then cerradoBlock else abiertoBlock"></div>
+                            <ng-template #cerradoBlock>
+                                <span class="horario-tiempo">Cerrado</span>
+                            </ng-template>
+                            <ng-template #abiertoBlock>
+                                <span class="horario-tiempo">{{ veterinariaInfo.horario[6].from }} - {{ veterinariaInfo.horario[6].to }}</span>
+                            </ng-template>
+                            
                         </li>
                     </ul>
                 </div>
@@ -199,26 +172,26 @@
                 <div class="card peto">
                     <h3>Contacto</h3>
                     <ul class="contacto">
-                        <li class="contacto-item">
-                            <i class="fa-solid fa-envelope"></i> <a href="mailto:email@email.com">email@email.com</a>
+                        <li *ngIf="veterinariaInfo.email" class="contacto-item">
+                            <i class="fa-solid fa-envelope"></i> <a href="mailto:{{ veterinariaInfo.email }}">{{ veterinariaInfo.email }}</a>
                         </li>
-                        <li class="contacto-item">
-                            <i class="fa-brands fa-whatsapp"></i> <a href="#">555555555555</a>
+                        <li *ngIf="veterinariaInfo.telefono" class="contacto-item">
+                            <i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/{{ veterinariaInfo.telefono }}">{{ veterinariaInfo.telefono }}</a>
                         </li>
-                        <li class="contacto-item">
-                            <i class="fa-solid fa-phone"></i> <a href="#">555555555555</a>
+                        <li *ngIf="veterinariaInfo.telefono" class="contacto-item">
+                            <i class="fa-solid fa-phone"></i> <a href="tel:{{ veterinariaInfo.telefono }}">{{ veterinariaInfo.telefono }}</a>
                         </li>
                     </ul>
                     <h3>Redes</h3>
                     <ul class="redes">
-                        <li class="redes-item">
-                            <i class="fa-brands fa-instagram"></i> <a href="#">@instagram</a>
+                        <li *ngIf="veterinariaInfo.instagram" class="redes-item">
+                            <i class="fa-brands fa-instagram"></i> <a href="{{ veterinariaInfo.instagram }}">@instagram</a>
                         </li>
-                        <li class="redes-item">
-                            <i class="fa-brands fa-facebook"></i> <a href="#">@facebook</a>
+                        <li *ngIf="veterinariaInfo.facebook" class="redes-item">
+                            <i class="fa-brands fa-facebook"></i> <a href="{{ veterinariaInfo.facebook }}">@facebook</a>
                         </li>
-                        <li class="redes-item">
-                            <i class="fa-brands fa-twitter"></i> <a href="#">@twitter</a>
+                        <li *ngIf="veterinariaInfo.twitter" class="redes-item">
+                            <i class="fa-brands fa-twitter"></i> <a href="{{ veterinariaInfo.twitter }}">@twitter</a>
                         </li>
                     </ul>
                 </div>

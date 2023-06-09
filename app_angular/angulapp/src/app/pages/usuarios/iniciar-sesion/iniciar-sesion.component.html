@@ -1,21 +1,35 @@
-<section class="page-title bg-dark text-light p-100">
+<!-- <section class="page-title bg-dark text-light p-100">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="title">Contacto</h1>
+                <h1 class="title">Iniciar Sesión</h1>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="home-contenido bloque-info p-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-12">
-                <h2 class="title">Entrar</h2>
-                <form id="formulario-login" class="d-flex flex-column form-user bg-light rounded">
-                    <input type="text" placeholder="User" id="fluser" name="fluser" class="mb-2 form-control">
-                    <input type="password" placeholder="Password" id="flpass" name="flpass" class="mb-2 form-control">
-                    <button class="btn btn-primary">Log-In</button>
+                <h2 class="title">Ingresar</h2>
+                <form [formGroup]="loginForm" id="formulario-login" class="d-flex flex-column form-user bg-light rounded">
+                    <input formControlName="user" type="text" placeholder="Usuario" id="fluser" name="fluser" class="mb-2 form-control">
+                    <div *ngIf="user.invalid && (user.dirty || user.touched)" class="text-danger">
+                        <div *ngIf="user.errors?.['required']">
+                            El nombre de usuario es requerido.
+                        </div>
+                    </div>
+                    <br>
+                    <input formControlName="password" type="password" placeholder="Contraseña" id="flpass" name="flpass" class="mb-2 form-control">
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                        <div *ngIf="password.errors?.['required']">
+                            La contraseña es requerida.
+                        </div>
+                    </div>
+                    <br>
+                    <button (click)="login()" class="btn btn-primary">Ingresar</button>
+
+                    <p>¿No tienes una cuenta? <a routerLink="usuario/iniciar-sesion/crear-cuenta">Regístrate</a></p>
                 </form>
             </div>

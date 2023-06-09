@@ -15,7 +15,7 @@ const routes: Routes = [
       {path:'a-domicilio', component:ADomicilioComponent},
       {path:'de-guardia', component:DeGuardiaComponent},
       {path:'mas-cercanas', component:MasCercanasComponent},
-      {path:'veterinaria', component:VeterinariaComponent},
+      {path:'veterinaria/:id', component:VeterinariaComponent},
       // {path:'veterinaria2', component:Veterinaria2Component},
     ]
   }

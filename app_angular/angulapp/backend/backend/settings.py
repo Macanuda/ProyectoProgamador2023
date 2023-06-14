@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'appMascotas',
 ]
@@ -100,10 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Custom User Model
-AUTH_USER_MODEL = 'appMascotas.CustomUser'
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -125,3 +122,29 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Custom User Model
+AUTH_USER_MODEL = 'appMascotas.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        # Autentifica con un token
+        'rest_framework.authentication.TokenAuthentication',
+        # Mantiene la sesión en una cookie para mantenerse autenticado
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES':[
+        # Autenticado o solo lectura
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        # Está autenticado
+        'rest_framework.permissions.IsAuthenticated',
+        # Es usuario administrador
+        'rest_framework.permissions.IsAdminUser',
+    ]
+}
+
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+CORS_ALLOWED_CREDENTIALS = True
+

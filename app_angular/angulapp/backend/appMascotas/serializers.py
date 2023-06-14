@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import make_password
+from .models import Producto
 
 class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(required=True)
@@ -13,3 +14,26 @@ class UserSerializer(serializers.ModelSerializer):
 
     def validate_password(self, value):
         return make_password(value)
+
+
+class ProductoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = '__all__'
+
+
+class AuthTokenSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField(style={'input_style' : 'password'})
+    def validate(self, data):
+        email = data.get('email')
+        password = data.get('password')
+        user = authenticate(
+            request = self.context.get('request'),
+            username = email,
+            password = password,
+        )
+        if not user:
+            raise serializers.ValidationError('No se pudo autenticar')
+        data['user'] = user
+        return data

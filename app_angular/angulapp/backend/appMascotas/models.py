@@ -9,6 +9,7 @@ from django.utils.timezone import now
 # -------------- ABSTRACT USER --------------
 class CustomUser(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
+    password = models.CharField(max_length=50)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username','password']
 

@@ -20,7 +20,6 @@ class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto
         fields = '__all__'
-        #fields = ('codigodeBarras',"nombre" ,'descripcion','peso','precio','cantidad')
 
 
 class AuthTokenSerializer(serializers.Serializer):
@@ -32,7 +31,7 @@ class AuthTokenSerializer(serializers.Serializer):
         user = authenticate(
             request = self.context.get('request'),
             username = email,
-            password = password
+            password = password,
         )
         if not user:
             raise serializers.ValidationError('No se pudo autenticar')

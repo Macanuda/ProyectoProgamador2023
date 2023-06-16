@@ -1,5 +1,5 @@
 from django.urls import path
-from appMascotas.views import LoginView, LogoutView, SignUpView, ProductosView, ProfileView, verProductos, agregarProducto, ListarUsuarios, CreateTokenView, UpdateUserView, MercadoPagoView, PagoExitosoView
+from appMascotas.views import LoginView, LogoutView, SignUpView, ProductosView, ProfileView, VerProductosView, AgregarProductoView, ListarUsuariosView, CreateTokenView, UpdateUserView, MercadoPagoView, PagoExitosoView
 
 urlpatterns = [
 
@@ -13,13 +13,13 @@ urlpatterns = [
     path('api/create-token/', CreateTokenView.as_view(), name='create_token' ),
 
     # Usuarios
-    path('api/usuarios/listar/', ListarUsuarios.as_view(), name='listar_usuarios'),
+    path('api/usuarios/listar/', ListarUsuariosView.as_view(), name='listar_usuarios'),
     path('api/user/profile/', ProfileView.as_view(), name='profile'),
 
     # Productos
     path('api/productos/', ProductosView.as_view(), name='productos'),
-    path('api/productos/ver/', verProductos.as_view({'get': 'list'}), name='ver_productos'),
-    path('api/productos/agregar/', agregarProducto.as_view(), name='agregar_producto'),
+    path('api/productos/ver/', VerProductosView.as_view({'get': 'list'}), name='ver_productos'),
+    path('api/productos/agregar/', AgregarProductoView.as_view(), name='agregar_producto'),
 
     # MercadoPago
     path('api/mercadopago/', MercadoPagoView.as_view(), name='mercadopago'),

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from rest_framework import status, generics, authentication, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -8,8 +8,10 @@ from rest_framework.authtoken.models import Token
 from .serializers import UserSerializer
 from .models import Producto, CustomUser
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+from rest_framework.authentication import BasicAuthentication
 from .serializers import ProductoSerializer, AuthTokenSerializer
 from rest_framework import viewsets
+from rest_framework.decorators import api_view
 import mercadopago
 import json
 
@@ -38,13 +40,13 @@ class LogoutView(APIView):
     
 #### Sign up ####
 class SignUpView(generics.CreateAPIView):
+    User = get_user_model()
     serializer_class = UserSerializer
+    queryset = User.objects.all()
+    def perform_create(self, serializer):
+        user = serializer.save()
+        token, created = Token.objects.get_or_create(user=user)
 
-#### Obtener productos ####
-class ProductosView(APIView):
-    def get(self, request):
-        # Lógica para obtener productos
-        return Response("Obteniendo productos", status=status.HTTP_200_OK)
 
 #### Obtener y actualizar el perfil ####
 class ProfileView(generics.RetrieveUpdateAPIView):
@@ -54,16 +56,22 @@ class ProfileView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         if self.request.user.is_authenticated:
             return self.request.user
+        
+########################################################################################################################################
+#### Obtener productos ####
+class ProductosView(APIView):
+    def get(self, request):
+        # Lógica para obtener productos
+        return Response("Obteniendo productos", status=status.HTTP_200_OK)
 
 #### Ver productos y categorías ####
-class verProductos(viewsets.ReadOnlyModelViewSet):
+class VerProductosView(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny] 
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
 
-
 #### Agregar producto ####
-class agregarProducto(APIView):
+class AgregarProductoView(APIView):
     permission_classes = [IsAdminUser]
     def post(self, request, format=None):
         serializer = ProductoSerializer(data=request.data)
@@ -73,7 +81,7 @@ class agregarProducto(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #### Listar usuarios ####
-class ListarUsuarios(generics.ListCreateAPIView):
+class ListarUsuariosView(generics.ListCreateAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     http_method_names = ['get']
@@ -83,9 +91,6 @@ class ListarUsuarios(generics.ListCreateAPIView):
         queryset = self.get_queryset()
         serializer = UserSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
-
 
 
 #### Los usuarios pueden ver su perfil ####
@@ -107,13 +112,13 @@ class UpdateUserView(generics.RetrieveUpdateAPIView):
 
 
 class CreateTokenView(ObtainAuthToken):
-    # serializer_class = AuthTokenSerializer
+    serializer_class = AuthTokenSerializer
     def post(self,request):
         email = request.data.get('email')
         password = request.data.get('password')
 
         # Realizar la lógica de autenticación y generación de token
-        user = authenticate(email=email, password=password)
+        user = authenticate(request, email=email, password=password)
         if user is not None:
             token, created = Token.objects.get_or_create(user=user)
             return Response({'token': token.key}, status=200)
@@ -121,7 +126,8 @@ class CreateTokenView(ObtainAuthToken):
             return Response({'error': 'Credenciales inválidas'}, status=400)
 
 
-#### MercadoPago ####
+#############################################################################################################################################
+######## MercadoPago ########
 class MercadoPagoView(APIView):
     def post(self, request):
         try:

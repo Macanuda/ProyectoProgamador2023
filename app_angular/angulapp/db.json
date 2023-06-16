@@ -619,6 +619,128 @@
       "postId": 1
     }
   ],
+  "productos": [
+    {
+      "id": 1,
+      "vetId": 1,
+      "vetNombre": "Veterinaria",
+      "imagen":"../../../assets/images/productos/01.webp",
+      "nombre": "producto 1",
+      "precioViejo": 0,
+      "precio": 10.00,
+      "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae.",
+      "tituloExtra": "Titulo extra",
+      "descripcionExtra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae, ornare libero. Vestibulum non eros leo. Pellentesque molestie urna vel nisi congue lacinia. Etiam vel dapibus nulla, nec pretium mauris. Etiam vitae lectus metus. In porta purus a lacinia posuere. Nunc non erat eu eros sodales tempus a vel nunc. Nulla et orci tempor, feugiat mauris in, tempor arcu. Praesent aliquam ultrices libero, ut vestibulum arcu sollicitudin ut. Cras convallis nulla vitae volutpat porttitor. Pellentesque at venenatis ante. Cras scelerisque ac velit quis condimentum.</p><p>      Ut ut dictum augue, dapibus fermentum metus. Sed accumsan eleifend vestibulum. Donec ultricies mauris ac eros consectetur, eget lacinia enim sollicitudin. Quisque fringilla rhoncus ipsum, ac tincidunt augue interdum a. Mauris quis lobortis lectus. In hac habitasse platea dictumst. Sed eget massa leo. Aliquam cursus ipsum sagittis elementum iaculis. Duis sodales quam justo, in interdum ligula tincidunt vitae. Phasellus aliquet eleifend ex. Cras libero metus, varius non efficitur eu, dapibus et turpis. Vestibulum commodo vestibulum felis, ut mollis turpis laoreet vel. Quisque tempus lacus quis tellus lobortis, vitae ornare risus ornare. Integer pellentesque commodo nulla nec malesuada.</p>",
+      "stockIlimitado": 0,
+      "stock": 100,
+      "categorias":[
+        {
+          "categoria":"Producto"
+        }, {
+          "categoria":"Categoria 1"
+        }, {
+          "categoria":"Categoria 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "vetId": 1,
+      "vetNombre": "Veterinaria",
+      "imagen":"../../../assets/images/productos/01.webp",
+      "nombre": "producto 2",
+      "precioViejo": 20.00,
+      "precio": 10.00,
+      "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae.",
+      "tituloExtra": "Titulo extra",
+      "descripcionExtra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae, ornare libero. Vestibulum non eros leo. Pellentesque molestie urna vel nisi congue lacinia. Etiam vel dapibus nulla, nec pretium mauris. Etiam vitae lectus metus. In porta purus a lacinia posuere. Nunc non erat eu eros sodales tempus a vel nunc. Nulla et orci tempor, feugiat mauris in, tempor arcu. Praesent aliquam ultrices libero, ut vestibulum arcu sollicitudin ut. Cras convallis nulla vitae volutpat porttitor. Pellentesque at venenatis ante. Cras scelerisque ac velit quis condimentum.</p><p>      Ut ut dictum augue, dapibus fermentum metus. Sed accumsan eleifend vestibulum. Donec ultricies mauris ac eros consectetur, eget lacinia enim sollicitudin. Quisque fringilla rhoncus ipsum, ac tincidunt augue interdum a. Mauris quis lobortis lectus. In hac habitasse platea dictumst. Sed eget massa leo. Aliquam cursus ipsum sagittis elementum iaculis. Duis sodales quam justo, in interdum ligula tincidunt vitae. Phasellus aliquet eleifend ex. Cras libero metus, varius non efficitur eu, dapibus et turpis. Vestibulum commodo vestibulum felis, ut mollis turpis laoreet vel. Quisque tempus lacus quis tellus lobortis, vitae ornare risus ornare. Integer pellentesque commodo nulla nec malesuada.</p>",
+      "stockIlimitado": 0,
+      "stock": 100,
+      "categorias":[
+        {
+          "categoria":"Producto"
+        }, {
+          "categoria":"Categoria 1"
+        }, {
+          "categoria":"Categoria 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "vetId": 1,
+      "vetNombre": "Veterinaria",
+      "imagen":"../../../assets/images/productos/01.webp",
+      "nombre": "producto 3",
+      "precioViejo": 20.00,
+      "precio": 10.00,
+      "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae.",
+      "tituloExtra": "Titulo extra",
+      "descripcionExtra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae, ornare libero. Vestibulum non eros leo. Pellentesque molestie urna vel nisi congue lacinia. Etiam vel dapibus nulla, nec pretium mauris. Etiam vitae lectus metus. In porta purus a lacinia posuere. Nunc non erat eu eros sodales tempus a vel nunc. Nulla et orci tempor, feugiat mauris in, tempor arcu. Praesent aliquam ultrices libero, ut vestibulum arcu sollicitudin ut. Cras convallis nulla vitae volutpat porttitor. Pellentesque at venenatis ante. Cras scelerisque ac velit quis condimentum.</p><p>      Ut ut dictum augue, dapibus fermentum metus. Sed accumsan eleifend vestibulum. Donec ultricies mauris ac eros consectetur, eget lacinia enim sollicitudin. Quisque fringilla rhoncus ipsum, ac tincidunt augue interdum a. Mauris quis lobortis lectus. In hac habitasse platea dictumst. Sed eget massa leo. Aliquam cursus ipsum sagittis elementum iaculis. Duis sodales quam justo, in interdum ligula tincidunt vitae. Phasellus aliquet eleifend ex. Cras libero metus, varius non efficitur eu, dapibus et turpis. Vestibulum commodo vestibulum felis, ut mollis turpis laoreet vel. Quisque tempus lacus quis tellus lobortis, vitae ornare risus ornare. Integer pellentesque commodo nulla nec malesuada.</p>",
+      "stockIlimitado": 0,
+      "stock": 100,
+      "categorias":[
+        {
+          "categoria":"Producto"
+        }, {
+          "categoria":"Categoria 1"
+        }, {
+          "categoria":"Categoria 2"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "vetId": 1,
+      "vetNombre": "Veterinaria",
+      "imagen":"../../../assets/images/productos/01.webp",
+      "nombre": "producto 4",
+      "precioViejo": 20.00,
+      "precio": 10.00,
+      "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae.",
+      "tituloExtra": "Titulo extra",
+      "descripcionExtra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae, ornare libero. Vestibulum non eros leo. Pellentesque molestie urna vel nisi congue lacinia. Etiam vel dapibus nulla, nec pretium mauris. Etiam vitae lectus metus. In porta purus a lacinia posuere. Nunc non erat eu eros sodales tempus a vel nunc. Nulla et orci tempor, feugiat mauris in, tempor arcu. Praesent aliquam ultrices libero, ut vestibulum arcu sollicitudin ut. Cras convallis nulla vitae volutpat porttitor. Pellentesque at venenatis ante. Cras scelerisque ac velit quis condimentum.</p><p>      Ut ut dictum augue, dapibus fermentum metus. Sed accumsan eleifend vestibulum. Donec ultricies mauris ac eros consectetur, eget lacinia enim sollicitudin. Quisque fringilla rhoncus ipsum, ac tincidunt augue interdum a. Mauris quis lobortis lectus. In hac habitasse platea dictumst. Sed eget massa leo. Aliquam cursus ipsum sagittis elementum iaculis. Duis sodales quam justo, in interdum ligula tincidunt vitae. Phasellus aliquet eleifend ex. Cras libero metus, varius non efficitur eu, dapibus et turpis. Vestibulum commodo vestibulum felis, ut mollis turpis laoreet vel. Quisque tempus lacus quis tellus lobortis, vitae ornare risus ornare. Integer pellentesque commodo nulla nec malesuada.</p>",
+      "stockIlimitado": 0,
+      "stock": 100,
+      "categorias":[
+        {
+          "categoria":"Producto"
+        }, {
+          "categoria":"Categoria 1"
+        }, {
+          "categoria":"Categoria 2"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "vetId": 1,
+      "vetNombre": "Veterinaria",
+      "imagen":"../../../assets/images/productos/01.webp",
+      "nombre": "producto 5",
+      "precioViejo": 20.00,
+      "precio": 10.00,
+      "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae.",
+      "tituloExtra": "Titulo extra",
+      "descripcionExtra": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum lorem id dictum cursus. In hac habitasse platea dictumst. Donec volutpat eros pharetra, congue nisl vitae, ornare libero. Vestibulum non eros leo. Pellentesque molestie urna vel nisi congue lacinia. Etiam vel dapibus nulla, nec pretium mauris. Etiam vitae lectus metus. In porta purus a lacinia posuere. Nunc non erat eu eros sodales tempus a vel nunc. Nulla et orci tempor, feugiat mauris in, tempor arcu. Praesent aliquam ultrices libero, ut vestibulum arcu sollicitudin ut. Cras convallis nulla vitae volutpat porttitor. Pellentesque at venenatis ante. Cras scelerisque ac velit quis condimentum.</p><p>      Ut ut dictum augue, dapibus fermentum metus. Sed accumsan eleifend vestibulum. Donec ultricies mauris ac eros consectetur, eget lacinia enim sollicitudin. Quisque fringilla rhoncus ipsum, ac tincidunt augue interdum a. Mauris quis lobortis lectus. In hac habitasse platea dictumst. Sed eget massa leo. Aliquam cursus ipsum sagittis elementum iaculis. Duis sodales quam justo, in interdum ligula tincidunt vitae. Phasellus aliquet eleifend ex. Cras libero metus, varius non efficitur eu, dapibus et turpis. Vestibulum commodo vestibulum felis, ut mollis turpis laoreet vel. Quisque tempus lacus quis tellus lobortis, vitae ornare risus ornare. Integer pellentesque commodo nulla nec malesuada.</p>",
+      "stockIlimitado": 0,
+      "stock": 100,
+      "categorias":[
+        {
+          "categoria":"Producto"
+        }, {
+          "categoria":"Categoria 1"
+        }, {
+          "categoria":"Categoria 2"
+        }
+      ]
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

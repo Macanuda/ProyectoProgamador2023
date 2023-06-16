@@ -19,6 +19,7 @@ import { VacunasComponent } from './mascotas/vacunas/vacunas.component';
 import { ADomicilioComponent } from './veterinarias/a-domicilio/a-domicilio.component';
 import { DeGuardiaComponent } from './veterinarias/de-guardia/de-guardia.component';
 import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.component';
+import { ProductoComponent } from './shop/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.c
     Veterinaria2Component,
     VeterinariasComponent,
     DeGuardiaComponent,
-    MasCercanasComponent,
+    MasCercanasComponent
   ],
   imports: [
     CommonModule,

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'appMascotas',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -72,13 +73,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mascotas',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': 3306,
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -130,10 +127,11 @@ AUTH_USER_MODEL = 'appMascotas.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
         # Autentifica con un token
-        'rest_framework.authentication.TokenAuthentication',
+        #'rest_framework.authentication.TokenAuthentication',
         # Mantiene la sesión en una cookie para mantenerse autenticado
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+        #'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.BasicAuthentication',
+        'knox.auth.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES':[
         # Autenticado o solo lectura
@@ -148,3 +146,6 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
 CORS_ALLOWED_CREDENTIALS = True
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]

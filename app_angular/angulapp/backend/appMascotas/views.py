@@ -1,35 +1,32 @@
-from django.shortcuts import render, get_object_or_404
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from rest_framework import status, generics, authentication, permissions
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.authtoken.models import Token
-from .serializers import UserSerializer
-from .models import Producto, CustomUser
+from django.contrib.auth import authenticate, login, logout
+
+from rest_framework import status, generics, authentication, permissions, viewsets, status
+from rest_framework.generics import GenericAPIView
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
-from rest_framework.authentication import BasicAuthentication
-from .serializers import ProductoSerializer, AuthTokenSerializer
-from rest_framework import viewsets
-from rest_framework.decorators import api_view
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
+
+from .models import Producto, CustomUser
+from .serializers import ProductoSerializer, AuthTokenSerializer, SignUpSerializer, UserSerializer
+
+from knox.models import AuthToken
+from knox.views import LoginView as KnoxLoginView
+
 import mercadopago
 import json
 
 #### Login ####
-class LoginView(APIView):
-    def post(self, request):
-        # Recuperamos las credenciales y autenticamos al usuario
-        email = request.data.get('email', None)
-        password = request.data.get('password', None)
-        user = authenticate(email=email, password=password)
+class LoginView(KnoxLoginView):
+    permission_classes = (permissions.AllowAny,)
 
-        # Si es correcto, añadimos a la request la información de sesión
-        if user:
-            login(request, user)
-            return Response(UserSerializer(user).data, status=status.HTTP_200_OK)
-        
-        # Si no es correcto, devolvemos un error
-        return Response(status=status.HTTP_404_NOT_FOUND)
+    def post(self, request, format=None):
+        serializer = AuthTokenSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        login(request, user)
+        return super(LoginView, self).post(request, format=None)
 
 #### Logout ####
 class LogoutView(APIView):
@@ -38,14 +35,20 @@ class LogoutView(APIView):
         logout(request)
         return Response(status=status.HTTP_200_OK)
     
-#### Sign up ####
-class SignUpView(generics.CreateAPIView):
-    User = get_user_model()
-    serializer_class = UserSerializer
-    queryset = User.objects.all()
-    def perform_create(self, serializer):
+
+class SignUpView(GenericAPIView):
+    serializer_class = SignUpSerializer
+    
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+
+        serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        token, created = Token.objects.get_or_create(user=user)
+        return Response({
+            'user': UserSerializer(user, context=self.get_serializer_context()).data,
+            'token': AuthToken.objects.create(user[1])
+        })
+
 
 
 #### Obtener y actualizar el perfil ####
@@ -65,7 +68,7 @@ class ProductosView(APIView):
         return Response("Obteniendo productos", status=status.HTTP_200_OK)
 
 #### Ver productos y categorías ####
-class VerProductosView(viewsets.ReadOnlyModelViewSet):
+class VerProductosView(viewsets.ModelViewSet):
     permission_classes = [AllowAny] 
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer

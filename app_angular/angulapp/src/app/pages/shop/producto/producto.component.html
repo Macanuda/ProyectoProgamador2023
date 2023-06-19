@@ -1,0 +1,165 @@
+<!-- Las secciones de contenidos de una pagina de veterinaria  -->
+
+<section class="breadcrumb-producto">    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="#">{{ productoInfo.categorias[0].categoria }}</a> / <a href="#">{{ productoInfo.categorias[1].categoria }}</a> / <a href="#">{{ productoInfo.categorias[2].categoria }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="producto-contenido p-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 align-self-center">
+                <div class="page-image"><img alt="veterinaria" src="../../../assets/images/productos/01.webp" /></div>
+            </div>            
+            <div class="col-lg-4 col-12 mb-lg-0 mb-4">
+                <h1 class="title-producto">{{ productoInfo.nombre }}</h1>
+                <div class="precio pt-4 pb-4 d-flex align-items-center">
+                    <div *ngIf="productoInfo.precioViejo" class="precio-old me-2">
+                        <del>${{ productoInfo.precioViejo }}</del>
+                    </div>
+                    <div class="precio-actual"><b>${{ productoInfo.precio }}</b></div>
+                </div>
+                <div class="descripcion pb-5">
+                    {{ productoInfo.descripcion }}
+                </div>
+                <div class="more-info">
+                    <a [routerLink]="['./']" fragment="more-producto">Mas info...</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 mb-lg-0 mb-4 bg-light p-5">
+                <div class="comprar-box">
+                    <button [routerLink]="['../../checkout', productoInfo.nombre]" class="btn btn-primary mb-2" id="boton-compra">Comprar</button>
+                    <div class="veterinaria-producto">{{ productoInfo.vetNombre }}</div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<section class="producto-informacion p-100 bg-light" id="more-producto">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>{{ productoInfo.tituloExtra }}</h2>
+                <div class="descripcion-extra">
+                    <div [innerHtml]="productoInfo.descripcionExtra"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-contenido bloque-info p-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h4 class="uppertitle">Valoraciones</h4>
+                <h2 class="title">Opiniones y algo mas</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="valora-no-loged">
+                    <a class="btn" href="user.html">Necesitas registrarte/loguearte para valorar</a>
+                </div>
+                <form id="valora-form">
+                    <div class="vf-username">Roberto Carlo</div>
+                    <div class="vf-stars" id="vf-star">
+                        <i class="fa-regular fa-star" id="val-star1"></i>
+                        <i class="fa-regular fa-star" id="val-star2"></i>
+                        <i class="fa-regular fa-star" id="val-star3"></i>
+                        <i class="fa-regular fa-star" id="val-star4"></i>
+                        <i class="fa-regular fa-star" id="val-star5"></i>
+                    </div>
+                    <input type="number" max="5" min="0" class="mb-2 form-control d-none" value="0" name="vf-val"
+                        id="vf-val" placeholder="0">
+                    <textarea name="vf-mensaje" placeholder="Valoración" id="" cols="30" rows="10"
+                        class="mb-2 form-control bg-light mb-2"></textarea>
+                    <button class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="row valoraciones">
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Juan Antonio Solis</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut
+                        explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut
+                        reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Estela Gutierrez</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut
+                        explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut
+                        reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Carla Martinez</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut
+                        explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut
+                        reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Marco Aurelio</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut
+                        explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut
+                        reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="valoracion">
+                    <header class="valora-header">
+                        <div class="valora-user">Juana Viale</div>
+                        <div class="valora-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+                                class="fa-regular fa-star"></i>
+                        </div>
+                    </header>
+                    <div class="valora-contento">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ut
+                        explicabo reiciendis sit velit fugiat, fuga, ipsam repellendus nulla quasi natus maxime. Est aut
+                        reiciendis nulla velit accusantium optio animi.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

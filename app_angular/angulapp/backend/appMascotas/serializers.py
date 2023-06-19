@@ -3,18 +3,30 @@ from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import make_password
 from .models import Producto, CustomUser
 
+
+
 class UserSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True)
-    username = serializers.CharField(required=True)
-    password = serializers.CharField(required=True, min_length=8)
+    # password = serializers.CharField(max_length=150)
 
     class Meta:
-        model = get_user_model
-        fields = ('email', 'username', 'password')
+        model = CustomUser
+        fields=('id','email', 'username')
 
     def validate_password(self, value):
         return make_password(value)
+    
 
+
+class SignUpSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ('id','email','username' , 'password')
+        extra_kwargs = {'password':{'write_only':True}}
+
+    def create(self, validated_data):
+        user = CustomUser.objects.create_user(validated_data['username'], validated_data['email'], validated_data['password'])
+
+        return user
 
 class ProductoSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,0 +1,40 @@
+<div class="row">  
+    <ng-container *ngFor="let veterinaria of veterinarias">
+    
+    <div class="col-lg-4 col-12 col-md-6" *ngIf="veterinaria.Adomicilio == 1">
+        <div class="vet-carto">
+            <figure>
+                <img [src]="veterinaria.thumbUrl" alt="veterinaria" title="veterinaria">
+                <div class="vc-servicios">
+                    <i *ngIf="veterinaria.Aexoticos" class="fa-solid fa-crow"></i>
+                    <i *ngIf="veterinaria.Anormales" class="fa-solid fa-dog"></i>
+                    <i *ngIf="veterinaria.Agranja" class="fa-solid fa-horse"></i>
+                </div>
+            </figure>
+            <div class="vc-content">
+                <h4 class="title">{{veterinaria.nombre}}</h4>
+                <div class="vc-ubicacion">{{veterinaria.Direccion}}</div>
+                <div class="vc-contacto">
+                    <ul class="contacto">
+                        <li class="contacto-item">
+                            <i class="fa-brands fa-whatsapp"></i> <a href="#">{{veterinaria.telefono}}</a>
+                        </li>
+                        <li class="contacto-item">
+                            <i class="fa-solid fa-phone"></i> <a href="#">{{veterinaria.telefono}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vc-bottom d-flex align-self-center justify-content-between">
+                    <div class="stars d-flex align-self-center">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i>
+                    </div>
+                    <div *ngIf="veterinaria.open == 1; then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock><div  class="vt-state open badge">Open</div></ng-template>
+                    <ng-template #elseBlock><div  class="vt-state closed badge">Closed</div></ng-template>
+                </div>
+                <a routerLink="../veterinaria/{{veterinaria.nombre}}" class="btn btn-primary w-100">Mas Info!</a>
+            </div>
+        </div>
+    </div>

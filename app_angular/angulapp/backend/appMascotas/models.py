@@ -1,14 +1,11 @@
-# SUPERUSER: 
-# root
-# 123456
-
 from django.db import models
-from django.contrib.auth.models import AbstractUser, User
+from django.contrib.auth.models import AbstractUser, AbstractBaseUser
 from django.utils.timezone import now
 
 # -------------- ABSTRACT USER --------------
 class CustomUser(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
+    password = models.CharField(max_length=150)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username','password']
 
@@ -317,4 +314,3 @@ class Servicio(models.Model):
         verbose_name_plural = 'Servicios'
     def __str__(self):
         return self.servicio
-

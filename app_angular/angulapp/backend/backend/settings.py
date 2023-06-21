@@ -26,8 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'appMascotas',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -43,7 +45,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost',
+    'http://localhost:4200',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -71,13 +73,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mascotas',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': 3306,
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -100,10 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Custom User Model
-AUTH_USER_MODEL = 'appMascotas.CustomUser'
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -125,3 +119,33 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Custom User Model
+AUTH_USER_MODEL = 'appMascotas.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        # Autentifica con un token
+        #'rest_framework.authentication.TokenAuthentication',
+        # Mantiene la sesión en una cookie para mantenerse autenticado
+        #'rest_framework.authentication.SessionAuthentication',
+        #'rest_framework.authentication.BasicAuthentication',
+        'knox.auth.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES':[
+        # Autenticado o solo lectura
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        # Está autenticado
+        'rest_framework.permissions.IsAuthenticated',
+        # Es usuario administrador
+        'rest_framework.permissions.IsAdminUser',
+    ]
+}
+
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000", "http://localhost:4200"]
+CORS_ALLOWED_CREDENTIALS = True
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]

@@ -1,24 +1,38 @@
-from django.urls import path
-from appMascotas.views import LoginView, LogoutView, SignUpView, InicioView, ProductosView, ProfileView, verProductos, agregarProducto, ListarUsuarios, CreateTokenView, UpdateUserView
-from django.views.generic import RedirectView
-from . import views
+from django.urls import path, include
+from appMascotas.views import LoginView, LogoutView, SignUpView, ProductosView, ProfileView, VerProductosView, AgregarProductoView, ListarUsuariosView, CreateTokenView, UpdateUserView, MercadoPagoView, PagoExitosoView
+from rest_framework import routers
+from knox import views as knox_views
+
+
+
+router = routers.DefaultRouter()
+router.register(r'productos', VerProductosView)
+
 
 urlpatterns = [
-    path('api/auth/login/', LoginView.as_view(), name='auth_login'),
-    path('api/auth/logout/', LogoutView.as_view(), name='auth_logout'),
-    path('api/auth/signup/', SignUpView.as_view(), name='auth_signup'),
-    path('api/create/', CreateTokenView.as_view(), name='create_token' ),
-    path('api/update/', UpdateUserView.as_view(), name='update_user' ),
+    
+    path('', include(router.urls)),
 
-    path('api/usuarios/listar/', ListarUsuarios.as_view(), name='listar_usuarios'),
-    path('api/user/profile/', ProfileView.as_view(), name='profile'),
+    # Sign up - login - logout
+    path('login/', LoginView.as_view(), name='auth_login'),
+    path('logout/', knox_views.LogoutView.as_view(), name='auth_logout'),
+    path('signup/', SignUpView.as_view(), name='auth_signup'),
+    path('update-user/', UpdateUserView.as_view(), name='update_user'),
 
+    # Token
+    path('create-token/', CreateTokenView.as_view(), name='create_token' ),
 
-    path('api/productos/', ProductosView.as_view(), name='productos'),
-    path('api/productos/ver/', verProductos.as_view({'get': 'list'}), name='ver_productos'),
-    path('api/productos/agregar/', agregarProducto.as_view(), name='agregar_producto'),
+    # Usuarios
+    path('usuarios/listar/', ListarUsuariosView.as_view(), name='listar_usuarios'),
+    path('user/profile/', ProfileView.as_view(), name='profile'),
 
+    # Productos
+    path('productos/', ProductosView.as_view(), name='productos'),
+    path('productos/ver/', VerProductosView.as_view({'get': 'list'}), name='ver_productos'),
+    path('productos/agregar/', AgregarProductoView.as_view(), name='agregar_producto'),
 
-    path('inicio/', views.InicioView , name='inicio'),
-    path('', RedirectView.as_view(pattern_name='inicio', permanent=False)),
+    # MercadoPago
+    path('mercadopago/', MercadoPagoView.as_view(), name='mercadopago'),
+    path('pago-exitoso/', PagoExitosoView.as_view(), name='pago_exitoso'),
 ]
+

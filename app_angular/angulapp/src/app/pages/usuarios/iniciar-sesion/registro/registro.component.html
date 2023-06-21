@@ -12,18 +12,38 @@
 
 <div class="col-lg-6 col-12">
     <!-- <h2 class="title">Registrarse</h2> -->
-    <form id="formulario-registro" class="d-flex flex-column form-user bg-light rounded" method="post"
-        onsubmit="validarEmail()">
-        <input type="text" placeholder="Nombre de usuario" id="fruser" name="fruser" class="mb-2 form-control" min="4" max="15"
-            autofocus required>
-        <input type="email" placeholder="E-mail" id="frmail" name="frmail" class="mb-2 form-control" multiple required>
-        <input type="text" placeholder="Nombre" id="frnombre" name="frnombre" class="mb-2 form-control" min="2" max="20"
-            required>
-        <input type="text" placeholder="Apellido" id="frapellido" name="frapellido" class="mb-2 form-control" required>
-        <input type="password" placeholder="Contraseña" id="frpass" name="frpass" class="mb-2 form-control" min="8"
-            max="20" required>
-        <input type="password" placeholder="Repetir contraseña" id="frpass2" name="frpass2" class="mb-2 form-control"
-            min="8" max="20" required>
+    <form [formGroup]="form" id="formulario-registro" class="d-flex flex-column form-user bg-light rounded" method="post" (ngSubmit)="onEnviar($event, usuario)">
+
+        <input formControlName="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" [class.border-danger]="NombreUsuarioValid" type="text" placeholder="Nombre de usuario" id="fruser" name="fruser" class="mb-2 form-control" min="4" max="15" autofocus required>
+        <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+            <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">El Nombre de Usuario es requerido</p>
+        </div>
+
+        <input formControlName="email" [(ngModel)]="usuario.email" [class.border-danger]="EmailValid" type="email" placeholder="E-mail" id="frmail" name="frmail" class="mb-2 form-control" multiple required>
+        <div *ngIf="Email?.errors && Email?.touched">
+            <p *ngIf="Email?.hasError('required')" class="text-danger">El Email es requerido</p>
+        </div>
+
+        <input formControlName="nombre" [(ngModel)]="usuario.nombre" [class.border-danger]="NombreValid" type="text" placeholder="Nombre" id="frnombre" name="frnombre" class="mb-2 form-control" min="2" max="20" required>
+        <div *ngIf="Nombre?.errors && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')" class="text-danger">El Nombre es requerido</p>
+        </div>
+
+        <input formControlName="apellido" [(ngModel)]="usuario.apellido" [class.border-danger]="ApellidoValid" type="text" placeholder="Apellido" id="frapellido" name="frapellido" class="mb-2 form-control" required>
+        <div *ngIf="Apellido?.errors && Apellido?.touched">
+            <p *ngIf="Apellido?.hasError('required')" class="text-danger">El Apellido es requerido</p>
+        </div>
+
+        <input formControlName="password" [(ngModel)]="usuario.password" [class.border-danger]="PasswordValid" type="password" placeholder="Contraseña" id="frpass" name="frpass" class="mb-2 form-control" min="8" max="20" required>
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">La Contraseña es requerida</p>
+        </div>
+
+        <input formControlName="password2" [class.border-danger]="Password2Valid" type="password" placeholder="Repetir contraseña" id="frpass2" name="frpass2" class="mb-2 form-control" min="8" max="20" required>
+        <div *ngIf="Password2?.errors && Password2?.touched">
+            <p *ngIf="Password2?.hasError('required')" class="text-danger">La Contraseña es requerida</p>
+        </div>
+            
         <div id="message">
             <b>El Password debe contener:</b><br>
             <span id="letter" class="invalid">Una letra en <b>minúscula</b></span><br>
@@ -33,7 +53,7 @@
             <br>
             <span id="equal" class="invalid">Los passwords deben <b>coincidir</b></span>
         </div>
-        <button class="btn btn-primary" type="submit" disabled="true" id="registerSubmit">Crear cuenta</button>
+        <button class="btn btn-primary" type="submit" id="registerSubmit">Crear cuenta</button>
     </form>
 </div>
 

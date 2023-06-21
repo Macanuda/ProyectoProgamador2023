@@ -1,6 +1,10 @@
 # SUPERUSER: 
-# root
-# 123456
+# admin@a.com
+# 123
+
+#----LOGIN----
+# {"email": "admin@a.com","password": "123"}
+
 
 from django.contrib import admin
 from django.contrib.auth import get_user_model
@@ -11,6 +15,7 @@ from .models import *
 @admin.register(get_user_model())
 class CustomUserAdmin(UserAdmin):
     pass
+
 
 # COMUNIDAD
 class ComunidadAdmin(admin.ModelAdmin):

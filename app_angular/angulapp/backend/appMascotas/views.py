@@ -67,7 +67,7 @@ class ProductosView(APIView):
         # Lógica para obtener productos
         return Response("Obteniendo productos", status=status.HTTP_200_OK)
 
-#### Ver productos y categorías ####
+#### Ver productos ####
 class VerProductosView(viewsets.ModelViewSet):
     permission_classes = [AllowAny] 
     queryset = Producto.objects.all()

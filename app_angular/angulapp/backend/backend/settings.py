@@ -133,6 +133,7 @@ REST_FRAMEWORK = {
         #'rest_framework.authentication.BasicAuthentication',
         'knox.auth.TokenAuthentication',
     ],
+    
     'DEFAULT_PERMISSION_CLASSES':[
         # Autenticado o solo lectura
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',

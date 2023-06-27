@@ -1,9 +1,7 @@
 from django.urls import path, include
-from appMascotas.views import LoginView, LogoutView, SignUpView, ProductosView, ProfileView, VerProductosView, AgregarProductoView, ListarUsuariosView, CreateTokenView, UpdateUserView, MercadoPagoView, PagoExitosoView
+from appMascotas.views import LoginView, LogoutView, SignUpView, ProductosView, ProfileView, VerProductosView, AgregarProductoView, ListarUsuariosView, CreateTokenView, UpdateUserView, MercadoPagoView, PagoExitosoView, VeterinariasView
 from rest_framework import routers
 from knox import views as knox_views
-
-
 
 router = routers.DefaultRouter()
 router.register(r'productos', VerProductosView)
@@ -25,6 +23,10 @@ urlpatterns = [
     # Usuarios
     path('usuarios/listar/', ListarUsuariosView.as_view(), name='listar_usuarios'),
     path('user/profile/', ProfileView.as_view(), name='profile'),
+
+    # Veterinarias
+    # path('veterinarias/', VerVeterinariasView.as_view({'get':'list'}), name='veterinarias'),
+    path('veterinarias/', VeterinariasView.as_view(), name='veterinarias'),
 
     # Productos
     path('productos/', ProductosView.as_view(), name='productos'),

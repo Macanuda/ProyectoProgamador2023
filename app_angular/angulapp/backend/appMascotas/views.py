@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 
-from .models import Producto, CustomUser
-from .serializers import ProductoSerializer, AuthTokenSerializer, SignUpSerializer, UserSerializer
+from .models import Producto, CustomUser, Veterinaria
+from .serializers import ProductoSerializer, AuthTokenSerializer, SignUpSerializer, UserSerializer, VeterinariaSerializer
 
 from knox.models import AuthToken
 from knox.views import LoginView as KnoxLoginView
@@ -61,13 +61,22 @@ class ProfileView(generics.RetrieveUpdateAPIView):
             return self.request.user
         
 ########################################################################################################################################
+#### Obtener veterinarias ####
+class VeterinariasView(APIView):
+    permission_classes = (permissions.AllowAny,)
+
+    def get(self, request):
+        veterinarias = Veterinaria.objects.all()
+        serializer = VeterinariaSerializer(veterinarias, many=True)   
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
 #### Obtener productos ####
 class ProductosView(APIView):
     def get(self, request):
         # Lógica para obtener productos
         return Response("Obteniendo productos", status=status.HTTP_200_OK)
 
-#### Ver productos y categorías ####
+#### Ver productos ####
 class VerProductosView(viewsets.ModelViewSet):
     permission_classes = [AllowAny] 
     queryset = Producto.objects.all()

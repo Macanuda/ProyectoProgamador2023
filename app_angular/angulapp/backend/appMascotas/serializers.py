@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import make_password
-from .models import Producto, CustomUser
+from .models import Producto, CustomUser, Veterinaria
 
 
 
@@ -15,7 +15,6 @@ class UserSerializer(serializers.ModelSerializer):
     def validate_password(self, value):
         return make_password(value)
     
-
 
 class SignUpSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,6 +31,12 @@ class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto
         fields = '__all__'
+
+
+class VeterinariaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Veterinaria
+        fields = ('nombre_veterinaria', 'email', 'pais', 'provincia', 'localidad', 'calle', 'numero')
 
 
 class AuthTokenSerializer(serializers.Serializer):

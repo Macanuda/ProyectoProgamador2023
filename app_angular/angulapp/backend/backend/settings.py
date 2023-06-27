@@ -45,7 +45,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost',
+    'http://localhost:4200',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -144,7 +144,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000", "http://localhost:4200"]
 CORS_ALLOWED_CREDENTIALS = True
 
 AUTHENTICATION_BACKENDS = [

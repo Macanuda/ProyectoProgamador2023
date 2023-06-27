@@ -8,7 +8,7 @@ import { VeterinariaComponent } from './veterinarias/veterinaria/veterinaria.com
 import { Veterinaria2Component } from './veterinarias/veterinaria2/veterinaria2.component';
 import { VeterinariasComponent } from './veterinarias/veterinarias.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { RegistroComponent } from './usuarios/iniciar-sesion/registro/registro.component';
+//import { RegistroComponent } from './usuarios/iniciar-sesion/registro/registro.component';
 import { IniciarSesionComponent } from './usuarios/iniciar-sesion/iniciar-sesion.component';
 import { PaseadoresComponent } from './cuidados/paseadores/paseadores.component';
 import { PeluqueriasCaninasComponent } from './cuidados/peluquerias-caninas/peluquerias-caninas.component';
@@ -19,13 +19,14 @@ import { VacunasComponent } from './mascotas/vacunas/vacunas.component';
 import { ADomicilioComponent } from './veterinarias/a-domicilio/a-domicilio.component';
 import { DeGuardiaComponent } from './veterinarias/de-guardia/de-guardia.component';
 import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.component';
+import { ProductoComponent } from './shop/producto/producto.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
     ContactoComponent,
-    RegistroComponent,
+    //RegistroComponent,
     AlimentacionComponent,
     CuidadosGeneralesComponent,
     InformacionMascotasComponent,
@@ -34,7 +35,7 @@ import { MasCercanasComponent } from './veterinarias/mas-cercanas/mas-cercanas.c
     Veterinaria2Component,
     VeterinariasComponent,
     DeGuardiaComponent,
-    MasCercanasComponent,
+    MasCercanasComponent
   ],
   imports: [
     CommonModule,

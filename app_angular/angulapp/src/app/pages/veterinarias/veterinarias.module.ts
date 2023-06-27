@@ -8,6 +8,8 @@ import { DeGuardiaComponent } from './de-guardia/de-guardia.component';
 import { VeterinariaComponent } from './veterinaria/veterinaria.component';
 import { VeterinariasComponent } from './veterinarias/veterinarias.component';
 import { VetItemComponent } from './vet-item/vet-item.component';
+import { VetItemGuardiaComponent } from './vet-item-guardia/vet-item-guardia.component';
+import { VetItemAdomicilioComponent } from './vet-item-adomicilio/vet-item-adomicilio.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { VetItemComponent } from './vet-item/vet-item.component';
     DeGuardiaComponent,
     VeterinariaComponent,
     VeterinariasComponent,
-    VetItemComponent
+    VetItemComponent,
+    VetItemGuardiaComponent,
+    VetItemAdomicilioComponent
   ],
   imports: [
     CommonModule,

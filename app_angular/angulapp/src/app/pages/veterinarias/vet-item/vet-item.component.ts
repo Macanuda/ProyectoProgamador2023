@@ -15,8 +15,7 @@ export class VetItemComponent {
 
   constructor(private rutaActiva: Router, private data:DataService){
     const now = new Date();
-    let current_day = now.getDay() - 1;
-    let current_hour = now.getHours();
+    let current_day = now.getDay();
 
 
     this.data.obtenerDatosVeterinaria().subscribe({
@@ -39,18 +38,36 @@ export class VetItemComponent {
           
         }       
         
+        console.log(data)
+        console.log("veterinarias encontradas")
         this.veterinarias = data;
+        console.log(this.veterinarias)
+        let index = 0
 
         if (this.rutaActiva.url == "/veterinarias/de-guardia"){
+          for (let k of this.veterinarias) {
+            console.log("chekeando")
+            console.log(k)
+            if(k.open==2) {
+              console.log("borrando")
+              console.log(this.veterinarias[index])
+              this.veterinarias.splice(index,1);              
+            }
+            index++
+          }
+
+
           console.log("de guardia")
           this.veterinarias.forEach((value:any,index:any)=>{
-            if(value.open==2) this.veterinarias.splice(index,1);
+            
+            
           });
         }
 
         if (this.rutaActiva.url == "/veterinarias/a-domicilio"){
           console.log("a domicilio")
           this.veterinarias.forEach((value:any,index:any)=>{
+            console.log("checking")
             if(value.Adomicilio==0) this.veterinarias.splice(index,1);
           });
         }

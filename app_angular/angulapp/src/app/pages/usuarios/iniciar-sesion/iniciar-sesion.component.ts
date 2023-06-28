@@ -34,10 +34,12 @@ export class IniciarSesionComponent {
   }
 
   login(){
+    console.log(this.loginForm.value);
     if(this.loginForm.valid){
-      this.loginService.login(this.loginForm.value).subscribe({
+      this.loginService.signIn(this.loginForm.value).subscribe({
         next: (userData) => {
           console.log(userData);
+          localStorage.setItem("token", userData.token);
         },
         error: (errorData) => {
           console.error(errorData);

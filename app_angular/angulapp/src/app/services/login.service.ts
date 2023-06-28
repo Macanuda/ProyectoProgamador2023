@@ -24,6 +24,10 @@ export class LoginService {
 
   }
 
+  signIn(usuario:any):Observable<any>{
+    return this.http.post<any>("http://localhost:8000/api/auth/login/", usuario);
+  }
+
   login(usuario:Usuario):Observable<any>{
     return this.http.post<any>('http://localhost:8000/api/auth/login/', usuario).pipe(
       map(data => {
@@ -31,8 +35,7 @@ export class LoginService {
         this.currentUserSubject.next(data);
         this.loggedIn.next(true);
         return data;
-      }),
-      catchError(this.handleError)
+      })
     )
   }
 

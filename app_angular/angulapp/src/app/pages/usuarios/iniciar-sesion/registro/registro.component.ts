@@ -32,6 +32,7 @@ export class RegistroComponent {
 
     if(this.form.valid){
       console.log('Enviando al servidor...');
+      alert('Usuario creado con éxito')
       console.log(usuario);
       this.usuarioService.onCrearUsuario(usuario).subscribe(
         data => {
